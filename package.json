@@ -6,12 +6,17 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "@types/axios": "^0.14.0",
     "@types/jest": "^24.9.1",
+    "@types/md5": "^2.2.0",
     "@types/node": "^12.12.50",
     "@types/react": "^16.9.43",
     "@types/react-dom": "^16.9.8",
     "@types/styled-components": "^5.1.1",
     "eslint-config-prettier": "^6.11.0",
+    "axios": "^0.19.2",
+    "md5": "^2.2.1",
+    "moment": "^2.27.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
@@ -24,6 +29,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "proxy": "http://api.smitegame.com/smiteapi.svc",
   "eslintConfig": {
     "extends": "react-app"
   },

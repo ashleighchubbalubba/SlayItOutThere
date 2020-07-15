@@ -1,11 +1,21 @@
-import React from 'react';
 import SavedGod from './components/SavedGod';
 import BuildView from './components/BuildView';
+import React, { useEffect } from 'react';
+import { SmiteAPI } from './api/SmiteAPI';
+import './App.css';
 
 import { GridRow, GridCol } from './components/Grid';
 import './App.css';
 
 function App() {
+
+  // TO DO - source devID and apiKey from ENV vars
+  const smiteApi = new SmiteAPI('3549', '40E0A5348C974D8391B5B4AE6993B11B');
+
+  useEffect(() => {
+    smiteApi.createSession();
+  })
+
   return (
     <div className="App">
       <GridRow>
