@@ -1,42 +1,28 @@
-import styled from "styled-components";
-import {
-  remCalc,
-  MOBILE_ONLY_MEDIA_QUERY,
-  TABLET_MEDIA_QUERY,
-  DESKTOP_MEDIA_QUERY,
-} from "../../styles";
+import styled from 'styled-components';
+import { MOBILE_ONLY_MEDIA_QUERY, TABLET_MEDIA_QUERY, DESKTOP_MEDIA_QUERY } from '../../styles';
 
-export const GridRow = styled("div")`
+export const GridRow = styled('div')`
   display: grid;
-  /*
-    IE Support
-  */
-  display: -ms-grid;
 
   @media ${MOBILE_ONLY_MEDIA_QUERY} {
-    grid-template-columns: repeat(4, minmax(${remCalc(50)}, 1fr));
-    grid-column-gap: ${remCalc(24)};
-    min-width: ${remCalc(272)};
-    margin-left: ${remCalc(24)};
-    margin-right: ${remCalc(24)};
+    grid-template-columns: repeat(4, minmax(50px, 1fr));
+    grid-column-gap: 24px;
+    min-width: 272px;
+    margin-left: 24px;
+    margin-right: 24px;
   }
   @media ${TABLET_MEDIA_QUERY} {
-    grid-template-columns: repeat(12, minmax(${remCalc(34)}, 1fr));
-    grid-column-gap: ${remCalc(24)};
-    margin-left: ${remCalc(48)};
-    margin-right: ${remCalc(48)};
+    grid-template-columns: repeat(12, minmax(34px, 1fr));
+    grid-column-gap: 24px;
+    margin-left: 48px;
+    margin-right: 48px;
   }
   @media ${DESKTOP_MEDIA_QUERY} {
-    grid-template-columns: repeat(12, minmax(${remCalc(53)}, 1fr));
-    grid-column-gap: ${remCalc(24)};
-    max-width: ${remCalc(1152)};
-    min-width: ${remCalc(900)};
+    grid-template-columns: repeat(12, minmax(53px, 1fr));
+    grid-column-gap: 24px;
+    max-width: 1152px;
+    min-width: 900px;
     margin-left: auto;
     margin-right: auto;
-
-    /*
-      IE Support
-    */
-    -ms-grid-columns: minmax(53px, 74px) 24px;
   }
 `;

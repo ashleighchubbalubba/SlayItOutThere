@@ -1,9 +1,5 @@
-import styled from "styled-components";
-import {
-  MOBILE_ONLY_MEDIA_QUERY,
-  TABLET_MEDIA_QUERY,
-  DESKTOP_MEDIA_QUERY,
-} from "../../styles";
+import styled from 'styled-components';
+import { MOBILE_ONLY_MEDIA_QUERY, TABLET_MEDIA_QUERY, DESKTOP_MEDIA_QUERY } from '../../styles';
 
 interface Props {
   desktopSpan?: number;

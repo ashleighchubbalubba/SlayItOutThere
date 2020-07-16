@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
-const SavedGod = () => {
-  return <div>Saved God</div>;
+const SavedGod = (props: any) => {
+  return <div>Name: {props.name}</div>;
 };
 
 export default SavedGod;
