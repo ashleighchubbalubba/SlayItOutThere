@@ -16,15 +16,19 @@ export class SmiteAPI {
     private format = 'JSON';
 
     constructor(devId: string, authKey: string, format?: string) {
+        console.log(`Constructing SmiteAPI instance with\ndevId:${devId}\nauthKey:${authKey}`)
         this.devId = devId;
         this.authKey = authKey;
         this.format = format ? format : this.format;
     }
 
     public async createSession() {
-        axios.get(this.getEndPoint(SmiteMethods.CreateSession)).then(res => {
-            this.sessionId = res.data.session_id;
-        });
+        console.log('Creating Smite Session.')
+        // axios.get(this.getEndPoint(SmiteMethods.CreateSession)).then(res => {
+        //     console.log(res);
+        //     console.log(`Session created with session id: ${res.data.session_id}`);
+        //     this.sessionId = res.data.session_id;
+        // });
     }
 
     private getSignature(methodName: string, timestamp: string) {
@@ -37,11 +41,13 @@ export class SmiteAPI {
         return `/${methodName}${this.format}/${this.devId}/${signature}/${timestamp}`;
     }
 
-    private async getGod(godName: string) {
+    public getGod(godName: string) {
+        console.log(godName);
+        return godName;
 
     }
 
-    private async getItem(itemName: string) {
+    public getItem(itemName: string) {
 
     }
 }
