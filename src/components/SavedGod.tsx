@@ -1,7 +1,10 @@
 import React from 'react';
+type Props = {
+  name: string;
+};
 
-const SavedGod = (props: any) => {
-  return <div>Name: {props.name}</div>;
+const SavedGod = ({ name }: Props) => {
+  return <div>Name: {name}</div>;
 };
 
 export default SavedGod;
