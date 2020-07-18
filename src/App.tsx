@@ -5,10 +5,6 @@ import BuildView from './components/BuildView';
 import { GridRow, GridCol } from './components/Grid';
 import './App.css';
 
-const god1 = 'Bellona';
-const god2 = 'Poseidon';
-const god3 = 'Neith';
-
 function App() {
   return (
     <div className="App">
