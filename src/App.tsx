@@ -1,9 +1,9 @@
-import SavedGod from './components/SavedGod';
-import BuildView from './components/BuildView';
 import React, { useEffect, useState, createContext } from 'react';
 import logo from './logo.svg';
 import { SmiteAPI } from './api/SmiteAPI';
 import './App.css';
+import SavedGod from './components/SavedGod';
+import BuildView from './components/BuildView';
 import ContextTestComponent from './components/context-test-component';
 
 import { GridRow, GridCol } from './components/Grid';
