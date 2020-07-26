@@ -25,15 +25,19 @@ function App() {
   const savedGods = [
     {
       name: 'Bellona',
-      thumbnail: '/assets/bellona.jpg',
-    },
-    {
-      name: 'Ao Kuang',
-      thumbnail: '/assets/aokuang.jpg',
+      thumbnail: '/icons/bellona.jpg',
     },
     {
       name: 'Jing Wei',
-      thumbnail: '/assets/jingwei.jpg',
+      thumbnail: '/icons/jingwei.jpg',
+    },
+    {
+      name: 'Ao Kuang',
+      thumbnail: '/icons/aokuang.jpg',
+    },
+    {
+      name: 'Mulan',
+      thumbnail: '/icons/mulan.jpeg',
     },
   ];
 
@@ -41,7 +45,7 @@ function App() {
     <SmiteApiProvider value={smiteApi}>
       <div className="App">
         <GridRow>
-          <GridCol desktopSpan={3}>
+          <GridCol desktopSpan={3} className = "savedGodsSection">
             {savedGods.map(function (god) {
               return <SavedGod name={god.name} thumbnail={god.thumbnail} />;
             })}

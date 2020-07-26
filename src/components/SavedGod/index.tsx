@@ -10,7 +10,7 @@ const SavedGod = ({ name, thumbnail }: Props) => {
   console.log(thumbnail);
   return (
     <>
-      <img src={thumbnail} alt="God Thumbnail" width="150" height="150" />
+      <img src={thumbnail} alt="God Thumbnail" className = "godThumbnail"/>
       <div className="godName">{name}</div>
     </>
   );
