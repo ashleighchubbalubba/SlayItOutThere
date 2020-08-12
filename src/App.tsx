@@ -2,7 +2,7 @@ import React, { useEffect, useState, createContext } from 'react';
 import logo from './logo.svg';
 import { SmiteAPI } from './api/SmiteAPI';
 import './App.css';
-import SavedGod from './components/SavedGod';
+import SavedGodsList from './components/SavedGodsList';
 import BuildView from './components/BuildView';
 import ContextTestComponent from './components/context-test-component';
 
@@ -45,10 +45,8 @@ function App() {
     <SmiteApiProvider value={smiteApi}>
       <div className="App">
         <GridRow>
-          <GridCol desktopSpan={3} className = "savedGodsSection">
-            {savedGods.map(function (god) {
-              return <SavedGod name={god.name} thumbnail={god.thumbnail} />;
-            })}
+          <GridCol desktopSpan={3}>
+            <SavedGodsList savedGods={savedGods} />
           </GridCol>
           <GridCol desktopSpan={9}>
             <BuildView />
