@@ -1,5 +1,4 @@
 import React, { useEffect, useState, createContext } from 'react';
-import logo from './logo.svg';
 import { SmiteAPI } from './api/SmiteAPI';
 import './App.css';
 import SavedGodsList from './components/SavedGodsList';

@@ -7,11 +7,12 @@ type Props = {
 };
 
 const SavedGod = ({ name, thumbnail }: Props) => {
-  console.log(thumbnail);
   return (
     <>
-      <img src={thumbnail} alt="God Thumbnail" className = "godThumbnail"/>
-      <div className="godName">{name}</div>
+      <div className="godImgAndName">
+        <img src={thumbnail} alt="God Thumbnail" className = "godThumbnail"/>
+        <div className="godName">{name}</div>
+      </div>
     </>
   );
 };
