@@ -18,7 +18,7 @@ function ContextTestComponent() {
             { context => { 
                 return context && (
                 <div>
-                    <button onClick={() => prompt(context)}>CLICK ME</button>
+                    {/* <button onClick={() => prompt(context)}>CLICK ME</button> */}
                     <div>
                         {god}
                     </div>

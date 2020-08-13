@@ -1,5 +1,12 @@
+html, body, #root {
+  width: 100%;
+  height: 100%;
+}
+
 .App {
   text-align: center;
+  background-color: #27241D;
+  height: 100%;
 }
 
 .App-logo {
@@ -35,4 +42,12 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.savedGodsSection {
+  background-color: #1B1813;
+}
+
+.savedGod {
+  color:#D3CEC4;
 }

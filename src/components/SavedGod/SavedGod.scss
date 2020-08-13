@@ -1,0 +1,25 @@
+.godImgAndName {
+  padding-bottom: 20px;
+}
+
+.godName {
+  padding-top: 4px;
+  font-family: Penumbra;
+  color: #D3CEC4;
+  font-weight: bold;
+}
+
+.godThumbnail {
+  width: 150px;
+  height: 150px;
+  border-radius: 3px;
+  border: 2px solid #85784A;
+}
+
+.godThumbnail:hover {
+  cursor: pointer;
+}
+
+.godThumbnail:focus {  
+  box-shadow: 0px 0px 20px #85784A;
+}
