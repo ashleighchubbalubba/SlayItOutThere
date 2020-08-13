@@ -1,8 +1,9 @@
 import React, { useEffect, useState, createContext } from 'react';
 import { SmiteAPI } from './api/SmiteAPI';
 import './App.css';
+
 import SavedGodsList from './components/SavedGodsList';
-import BuildView from './components/BuildView';
+import ItemsGrid from './components/ItemGrid';
 import ContextTestComponent from './components/context-test-component';
 
 import { GridRow, GridCol } from './components/Grid';
@@ -48,7 +49,7 @@ function App() {
             <SavedGodsList savedGods={savedGods} />
           </GridCol>
           <GridCol desktopSpan={9}>
-            <BuildView />
+            <ItemsGrid />
           </GridCol>
         </GridRow>
         <ContextTestComponent></ContextTestComponent>
