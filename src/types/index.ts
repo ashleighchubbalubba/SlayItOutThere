@@ -5,4 +5,5 @@ export type GodsListFields = {
 export type GodFields = {
   name: string;
   thumbnail: string;
+  isSelectedGod?: boolean;
 };
