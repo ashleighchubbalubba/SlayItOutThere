@@ -1,15 +1,11 @@
 import React from 'react';
-import './SavedGod.scss';
+import './God.scss';
+import { GodFields } from '../../types';
 
-type Props = {
-  name: string;
-  thumbnail: string;
-};
-
-const SavedGod = ({ name, thumbnail }: Props) => {
+const God = ({ name, thumbnail }: GodFields) => {
   return (
     <>
-      <div className="godImgAndName">
+      <div className="godWrapper">
         <img src={thumbnail} alt="God Thumbnail" className = "godThumbnail"/>
         <div className="godName">{name}</div>
       </div>
@@ -17,4 +13,4 @@ const SavedGod = ({ name, thumbnail }: Props) => {
   );
 };
 
-export default SavedGod;
+export default God;

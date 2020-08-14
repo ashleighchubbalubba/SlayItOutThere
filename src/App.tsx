@@ -1,8 +1,9 @@
 import React, { useEffect, useState, createContext } from 'react';
 import { SmiteAPI } from './api/SmiteAPI';
 import './App.css';
-import SavedGodsList from './components/SavedGodsList';
-import BuildView from './components/BuildView';
+
+import GodsList from './components/GodsList';
+import ItemsGrid from './components/ItemGrid';
 import ContextTestComponent from './components/context-test-component';
 
 import { GridRow, GridCol } from './components/Grid';
@@ -14,6 +15,7 @@ export const SmiteApiProvider = context.Provider;
 export const SmiteApiConsumer = context.Consumer;
 
 function App() {
+
   const [smiteApi, setSmiteApi] = useState(
     new SmiteAPI('3549', '40E0A5348C974D8391B5B4AE6993B11B')
   );
@@ -21,7 +23,7 @@ function App() {
     smiteApi.createSession();
   }, []);
 
-  const savedGods = [
+  const sampleGods = [
     {
       name: 'Bellona',
       thumbnail: '/icons/bellona.jpg',
@@ -45,10 +47,10 @@ function App() {
       <div className="App">
         <GridRow>
           <GridCol desktopSpan={3}>
-            <SavedGodsList savedGods={savedGods} />
+            <GodsList godsList={sampleGods} />
           </GridCol>
           <GridCol desktopSpan={9}>
-            <BuildView />
+            <ItemsGrid />
           </GridCol>
         </GridRow>
         <ContextTestComponent></ContextTestComponent>
