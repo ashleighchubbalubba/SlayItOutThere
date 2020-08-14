@@ -20,10 +20,10 @@ export const GridRow = styled.div<Props>`
     margin-right: 24px;
 
     ${({ mobile }) =>
-      mobile && typeof mobile === 'number'
+      mobile
         ? `
             display: grid;
-            grid-template-columns: repeat(${mobile}, minmax(50px, 1fr));
+            grid-template-columns: repeat(${+mobile}, minmax(50px, 1fr));
             max-width: auto;
             min-width: auto;
             margin-right: 0;
@@ -40,10 +40,10 @@ export const GridRow = styled.div<Props>`
     margin-right: 48px;
 
     ${({ tablet }) =>
-      tablet && typeof tablet === 'number'
+      tablet
         ? `
             display: grid;
-            grid-template-columns: repeat(${tablet}, minmax(34px, 1fr));
+            grid-template-columns: repeat(${+tablet}, minmax(34px, 1fr));
             max-width: auto;
             min-width: auto;
             margin-right: 0;
@@ -61,10 +61,10 @@ export const GridRow = styled.div<Props>`
     margin-right: auto;
 
     ${({ desktop }) =>
-      desktop && typeof desktop === 'number'
+      desktop
         ? `
             display: grid;
-            grid-template-columns: repeat(${desktop}, minmax(53px, 1fr));
+            grid-template-columns: repeat(${+desktop}, minmax(53px, 1fr));
             max-width: auto;
             min-width: auto;
             margin-right: 0;
