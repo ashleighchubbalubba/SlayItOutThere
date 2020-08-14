@@ -15,7 +15,6 @@ export const SmiteApiProvider = context.Provider;
 export const SmiteApiConsumer = context.Consumer;
 
 function App() {
-
   const [smiteApi, setSmiteApi] = useState(
     new SmiteAPI('3549', '40E0A5348C974D8391B5B4AE6993B11B')
   );
@@ -46,10 +45,10 @@ function App() {
     <SmiteApiProvider value={smiteApi}>
       <div className="App">
         <GridRow>
-          <GridCol desktopSpan={3}>
+          <GridCol desktop={3}>
             <GodsList godsList={sampleGods} />
           </GridCol>
-          <GridCol desktopSpan={9}>
+          <GridCol desktop={9}>
             <ItemsGrid />
           </GridCol>
         </GridRow>
