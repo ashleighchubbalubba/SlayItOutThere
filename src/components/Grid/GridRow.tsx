@@ -56,7 +56,6 @@ export const GridRow = styled.div<Props>`
   @media ${DESKTOP_MEDIA_QUERY} {
     grid-template-columns: repeat(12, minmax(53px, 1fr));
     grid-column-gap: 24px;
-    max-width: 85vw;
     min-width: 900px;
     margin-left: auto;
     margin-right: auto;
