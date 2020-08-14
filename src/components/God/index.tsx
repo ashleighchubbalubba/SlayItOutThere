@@ -1,12 +1,8 @@
 import React from 'react';
 import './God.scss';
+import { GodFields } from '../../types';
 
-type Props = {
-  name: string;
-  thumbnail: string;
-};
-
-const God = ({ name, thumbnail }: Props) => {
+const God = ({ name, thumbnail }: GodFields) => {
   return (
     <>
       <div className="godImgAndName">
