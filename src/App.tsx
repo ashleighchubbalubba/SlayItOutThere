@@ -22,26 +22,58 @@ function App() {
     smiteApi.createSession();
   }, []);
 
-  const sampleGods = [
+  const sampleItems = [
     {
-      name: 'Bellona',
-      thumbnail: '/icons/bellona.jpg',
+      name: 'Warriors Blessing',
+      thumbnail: '/items/warriors-blessing.webp',
     },
     {
-      name: 'Jing Wei',
-      thumbnail: '/icons/jingwei.jpg',
+      name: 'Berserkers Shield',
+      thumbnail: '/items/berserkers-shield.webp',
     },
     {
-      name: 'Ao Kuang',
-      thumbnail: '/icons/aokuang.jpg',
+      name: 'Ninja Tabi',
+      thumbnail: '/items/ninja-tabi.webp',
     },
     {
-      name: 'Mulan',
-      thumbnail: '/icons/mulan.jpeg',
+      name: 'Frostbound Hammer',
+      thumbnail: '/items/frostbound-hammer.webp',
+    },
+    {
+      name: 'Hastened Katana',
+      thumbnail: '/items/hastened-katana.webp',
+    },
+    {
+      name: 'Wind Demon',
+      thumbnail: '/items/wind-demon.webp',
+    },
+    {
+      name: 'Guardians Blessing',
+      thumbnail: '/items/guardians-blessing.webp',
+    },
+    {
+      name: 'Gauntlet Of Thebes',
+      thumbnail: '/items/gauntlet-of-thebes.webp',
+    },
+    {
+      name: 'Talaria Boots',
+      thumbnail: '/items/talaria-boots.webp',
+    },
+    {
+      name: 'Relic Dagger',
+      thumbnail: '/items/relic-dagger.webp',
+    },
+    {
+      name: 'Sovereignty',
+      thumbnail: '/items/sovereignty.webp',
+    },
+    {
+      name: 'Heartward Amulet',
+      thumbnail: '/items/heartward-amulet.webp',
     },
   ];
 
-  const sampleItems = [
+  const warriorBuild = [
     {
       name: 'Warriors Blessing',
       thumbnail: '/items/warriors-blessing.webp',
@@ -68,6 +100,57 @@ function App() {
     },
   ];
 
+  const supportBuild = [
+    {
+      name: 'Guardians Blessing',
+      thumbnail: '/items/guardians-blessing.webp',
+    },
+    {
+      name: 'Gauntlet Of Thebes',
+      thumbnail: '/items/gauntlet-of-thebes.webp',
+    },
+    {
+      name: 'Talaria Boots',
+      thumbnail: '/items/talaria-boots.webp',
+    },
+    {
+      name: 'Relic Dagger',
+      thumbnail: '/items/relic-dagger.webp',
+    },
+    {
+      name: 'Sovereignty',
+      thumbnail: '/items/sovereignty.webp',
+    },
+    {
+      name: 'Heartward Amulet',
+      thumbnail: '/items/heartward-amulet.webp',
+    },
+  ];
+
+
+  const sampleGods = [
+    {
+      name: 'Bellona',
+      thumbnail: '/icons/bellona.jpg',
+      build: warriorBuild,
+    },
+    {
+      name: 'Jing Wei',
+      thumbnail: '/icons/jingwei.jpg',
+      build: supportBuild,
+    },
+    {
+      name: 'Ao Kuang',
+      thumbnail: '/icons/aokuang.jpg',
+      build: supportBuild,
+    },
+    {
+      name: 'Mulan',
+      thumbnail: '/icons/mulan.jpeg',
+      build: warriorBuild,
+    },
+  ];
+
   return (
     <SmiteApiProvider value={smiteApi}>
       <div className="App">
@@ -75,8 +158,14 @@ function App() {
           <GridCol desktop={3}>
             <GodsList godsList={sampleGods} />
           </GridCol>
-          <GridCol desktop={9}>
-            <ItemsGrid itemsList={sampleItems}/>
+          <GridCol desktop={9} className="rightHalf">
+            <GridRow desktop={9} className="miniGrid">
+              <GridCol desktop={2}></GridCol>
+              <GridCol desktop={5}>
+                <ItemsGrid itemsList={supportBuild} />
+              </GridCol>
+              <GridCol desktop={2}></GridCol>
+            </GridRow>
           </GridCol>
         </GridRow>
         <ContextTestComponent></ContextTestComponent>

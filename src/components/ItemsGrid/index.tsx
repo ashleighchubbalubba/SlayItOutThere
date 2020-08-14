@@ -8,9 +8,11 @@ const ItemsGrid = ({ itemsList }: ItemsListFields) => {
   <>
     <div className="itemsList">
         <div className="itemsListTitle" >NAME OF GOD</div>
-        {itemsList.map((item) => (
-          <Item name={item.name} thumbnail={item.thumbnail}/>
-        ))}
+        <div className="itemsGrid">
+          {itemsList.map((item) => (
+            <Item name={item.name} thumbnail={item.thumbnail}/>
+          ))}
+        </div>
     </div>
   </>
   );
