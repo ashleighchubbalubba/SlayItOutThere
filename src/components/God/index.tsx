@@ -1,12 +1,12 @@
 import React from 'react';
-import './SavedGod.scss';
+import './God.scss';
 
 type Props = {
   name: string;
   thumbnail: string;
 };
 
-const SavedGod = ({ name, thumbnail }: Props) => {
+const God = ({ name, thumbnail }: Props) => {
   return (
     <>
       <div className="godImgAndName">
@@ -17,4 +17,4 @@ const SavedGod = ({ name, thumbnail }: Props) => {
   );
 };
 
-export default SavedGod;
+export default God;
