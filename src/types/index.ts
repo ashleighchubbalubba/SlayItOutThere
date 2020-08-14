@@ -7,3 +7,12 @@ export type GodFields = {
   thumbnail: string;
   isSelectedGod?: boolean;
 };
+
+export type ItemsListFields = {
+  itemsList: Array<ItemFields>;
+};
+
+export type ItemFields = {
+  name: string;
+  thumbnail: string;
+};

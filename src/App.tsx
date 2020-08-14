@@ -3,7 +3,7 @@ import { SmiteAPI } from './api/SmiteAPI';
 import './App.css';
 
 import GodsList from './components/GodsList';
-import ItemsGrid from './components/ItemGrid';
+import ItemsGrid from './components/ItemsGrid';
 import ContextTestComponent from './components/context-test-component';
 
 import { GridRow, GridCol } from './components/Grid';
@@ -41,6 +41,33 @@ function App() {
     },
   ];
 
+  const sampleItems = [
+    {
+      name: 'Warriors Blessing',
+      thumbnail: '/items/warriors-blessing.webp',
+    },
+    {
+      name: 'Berserkers Shield',
+      thumbnail: '/items/berserkers-shield.webp',
+    },
+    {
+      name: 'Ninja Tabi',
+      thumbnail: '/items/ninja-tabi.webp',
+    },
+    {
+      name: 'Frostbound Hammer',
+      thumbnail: '/items/frostbound-hammer.webp',
+    },
+    {
+      name: 'Hastened Katana',
+      thumbnail: '/items/hastened-katana.webp',
+    },
+    {
+      name: 'Wind Demon',
+      thumbnail: '/items/wind-demon.webp',
+    },
+  ];
+
   return (
     <SmiteApiProvider value={smiteApi}>
       <div className="App">
@@ -49,7 +76,7 @@ function App() {
             <GodsList godsList={sampleGods} />
           </GridCol>
           <GridCol desktop={9}>
-            <ItemsGrid />
+            <ItemsGrid itemsList={sampleItems}/>
           </GridCol>
         </GridRow>
         <ContextTestComponent></ContextTestComponent>
