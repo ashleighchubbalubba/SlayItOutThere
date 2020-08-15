@@ -127,7 +127,6 @@ function App() {
     },
   ];
 
-
   const sampleGods = [
     {
       name: 'Bellona',
@@ -154,6 +153,7 @@ function App() {
   return (
     <SmiteApiProvider value={smiteApi}>
       <div className="App">
+        <img src="/icons/smiteLogo.png" alt="Smite" className="smiteLogo"/>
         <GridRow>
           <GridCol desktop={3}>
             <GodsList godsList={sampleGods} />

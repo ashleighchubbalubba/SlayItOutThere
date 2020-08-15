@@ -60,3 +60,9 @@ html, body, #root {
   height: 100%;
   align-items: center;
 }
+
+.smiteLogo {
+  height: 40px;
+  position: fixed;
+  right: 12px;
+}
