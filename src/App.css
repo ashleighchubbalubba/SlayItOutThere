@@ -51,3 +51,18 @@ html, body, #root {
 .savedGod {
   color:#D3CEC4;
 }
+
+.rightHalf {
+  margin-right: 25px;
+}
+
+.miniGrid {
+  height: 100%;
+  align-items: center;
+}
+
+.smiteLogo {
+  height: 40px;
+  position: fixed;
+  right: 12px;
+}

@@ -3,27 +3,6 @@ import God from '../God';
 import './GodsList.scss';
 import { GodsListFields } from '../../types';
 
-/*
-const sampleGods = [
-    {
-      name: 'Bellona',
-      thumbnail: '/icons/bellona.jpg',
-    },
-    {
-      name: 'Jing Wei',
-      thumbnail: '/icons/jingwei.jpg',
-    },
-    {
-      name: 'Ao Kuang',
-      thumbnail: '/icons/aokuang.jpg',
-    },
-    {
-      name: 'Mulan',
-      thumbnail: '/icons/mulan.jpeg',
-    },
-  ];
-*/
-
 const GodsList = ({ godsList }: GodsListFields) => {
   const [selectedGod, setSelectedGod] = useState(-1);
 
