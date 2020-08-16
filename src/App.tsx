@@ -1,26 +1,26 @@
-import React, { useEffect, useState, createContext } from 'react';
-import { SmiteAPI } from './api/SmiteAPI';
+import React, { useState, createContext } from 'react';
 import './App.css';
 
 import GodsList from './components/GodsList';
 import ItemsGrid from './components/ItemsGrid';
-import ContextTestComponent from './components/context-test-component';
 
 import { GridRow, GridCol } from './components/Grid';
 import './App.css';
+import { SelectedGodContextType } from './types';
 
-// TO DO - source devID and apiKey from ENV vars
-const context = createContext<SmiteAPI | null>(null);
-export const SmiteApiProvider = context.Provider;
-export const SmiteApiConsumer = context.Consumer;
+//the Context Object, a template for the code below
+//defines skeleton of the context
+export const SelectedGodContext = createContext<SelectedGodContextType>({
+  //a State Property of the Context
+  selectedGodState: {
+    //what defines the state
+    selectedGod: -1,
+    //used to change the state
+    setSelectedGod: () => undefined,
+  },
+});
 
-function App() {
-  const [smiteApi, setSmiteApi] = useState(
-    new SmiteAPI('3549', '40E0A5348C974D8391B5B4AE6993B11B')
-  );
-  useEffect(() => {
-    smiteApi.createSession();
-  }, []);
+const App = () => {
 
   const sampleItems = [
     {
@@ -150,10 +150,19 @@ function App() {
     },
   ];
 
+  //uses the Context template from above
+  const [selectedGod, setSelectedGod] = useState(-1);
+
   return (
-    <SmiteApiProvider value={smiteApi}>
+    //tag that wraps everything that needs the global context
+    <SelectedGodContext.Provider
+      //actually defines the default value, with what is written above
+      value={{
+        selectedGodState: { selectedGod, setSelectedGod },
+      }}
+    >
       <div className="App">
-        <img src="/icons/smiteLogo.png" alt="Smite" className="smiteLogo"/>
+        <img src="/icons/smiteLogo.png" alt="Smite" className="smiteLogo" />
         <GridRow>
           <GridCol desktop={3}>
             <GodsList godsList={sampleGods} />
@@ -168,10 +177,9 @@ function App() {
             </GridRow>
           </GridCol>
         </GridRow>
-        <ContextTestComponent></ContextTestComponent>
       </div>
-    </SmiteApiProvider>
+    </SelectedGodContext.Provider>
   );
-}
+};
 
 export default App;
