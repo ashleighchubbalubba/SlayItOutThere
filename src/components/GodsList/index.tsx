@@ -1,22 +1,24 @@
-import React, { useState } from 'react';
+import React from 'react';
 import God from '../God';
 import './GodsList.scss';
-import { GodsListFields } from '../../types';
+import { God as GodType } from '../../types';
 
-const GodsList = ({ godsList }: GodsListFields) => {
-  const [selectedGod, setSelectedGod] = useState(-1);
-
-  const handleSetSelectedGod = (index: number) => {
-    setSelectedGod(index);
-  };
-
+//recieves the props from App.tsx
+const GodsList = ({ selectedGod, godList, setSelectedGod }: any) => {
   return (
     <>
       <div className="godsList">
         <div className="godsListTitle">MY SAVED GODS</div>
-        {godsList.map((god, index) => (
-          <div onClick={() => handleSetSelectedGod(index)}>
-            <God name={god.name} thumbnail={god.thumbnail} isSelectedGod={selectedGod === index}/>
+        {godList.map((god: GodType) => (
+          <div>
+            {/* pass more props onto the God component */}
+            <God
+              id={god.id}
+              name={god.name}
+              thumbnail={god.thumbnail}
+              isSelectedGod={selectedGod === god.id}
+              setSelectedGod={setSelectedGod}
+            />
           </div>
         ))}
       </div>

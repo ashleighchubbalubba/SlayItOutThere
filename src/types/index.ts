@@ -1,18 +1,16 @@
-export type GodsListFields = {
-  godsList: Array<GodFields>;
-};
-
-export type GodFields = {
+export interface God {
+  id: number;
   name: string;
   thumbnail: string;
-  isSelectedGod?: boolean;
-};
+  build?: Array<Item>;
+}
 
-export type ItemsListFields = {
-  itemsList: Array<ItemFields>;
-};
-
-export type ItemFields = {
+export interface Item {
   name: string;
   thumbnail: string;
-};
+}
+
+export interface GlobalState {
+  selectedGod: number;
+  godList: Array<God>;
+}

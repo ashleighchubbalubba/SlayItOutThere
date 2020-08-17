@@ -1,14 +1,21 @@
 import React from 'react';
 import './God.scss';
-import { GodFields } from '../../types';
 
-const God = ({ name, thumbnail, isSelectedGod }: GodFields) => {
+const God = ({ id, name, thumbnail, isSelectedGod, setSelectedGod }: any) => {
+
+  //on an event change, it calls the method that changes the selected god
+  const handleSetSelectedGod = () => {
+    setSelectedGod(id);
+  };
+
   return (
     <>
-      <div className="godWrapper">
+      {/* when this tag is clicked on, it triggers handleSetSelectedGod */}
+      <div className="godWrapper" onClick={() => handleSetSelectedGod()}>
         <img
           src={thumbnail}
           alt="God Thumbnail"
+          // if isSelectedGod == true, then 'selectedGod' is an additional className for this god
           className={`${isSelectedGod && 'selectedGod'} godThumbnail`}
         />
         <div className="godName">{name}</div>
