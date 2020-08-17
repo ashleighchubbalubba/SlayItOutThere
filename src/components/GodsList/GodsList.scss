@@ -54,3 +54,21 @@
   margin-top: 7px;
   margin-bottom: 13px;
 }
+
+.searchGod {
+  background-color: #423D33;
+  border-width: 0px;
+  width: 71%;
+  height: 28px;
+  border-radius: 3.5px;
+  color: #E8E6E1;
+  padding-left: 7px;
+  margin-bottom: 15px;
+  margin-top: 3px;
+  font-size: 16.5px;
+}
+
+.searchGod:focus {
+  outline:0;
+  background-color: #504A40;
+}
