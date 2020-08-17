@@ -1,15 +1,56 @@
 .godsList {
   background-color: #1b1813;
-  overflow-y: scroll;
   height: 100vh;
-  
   box-shadow: 0px 0px 60px #373122;
 }
 
-.godsListTitle {
-  font-size: 22px;
+.sideBarHeading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: sticky;
+}
+
+.sideBarList {
+  overflow-y: scroll;
+  height: 100vh;
+  padding-top: 18px;
+}
+
+.sideBarTitles {
+  display: inline-flex;
+  margin-top: 30px;
+}
+
+.savedGodsTitle {
+  font-size: 20px;
   font-family: Penumbra HalfSerif Std;
-  color: #faf9f7;
-  padding-bottom: 19px;
-  padding-top: 30px;
+  color: #625D52;
+  margin-right: 31px;
+}
+
+.allGodsTitle {
+  font-size: 20px;
+  font-family: Penumbra HalfSerif Std;
+  color: #625D52;
+}
+
+.savedGodsTitle:hover {
+  color: #FAF9F7;
+  cursor: pointer;
+
+}
+
+.allGodsTitle:hover {
+  color: #FAF9F7;
+  cursor: pointer;
+}
+
+.sideBarHeadingLine {
+  width: 73.5%;
+  height: 2px;
+  background-color: #423D33;
+  text-align: center;
+  margin-top: 7px;
+  margin-bottom: 13px;
 }
