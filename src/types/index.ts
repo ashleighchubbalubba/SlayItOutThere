@@ -1,26 +1,16 @@
-export interface GodsListFields {
-  godsList: Array<GodFields>;
-};
-
-export interface GodFields {
+export interface God {
+  id: number;
   name: string;
   thumbnail: string;
-  isSelectedGod?: boolean;
-};
+  build?: Array<Item>;
+}
 
-export interface ItemsListFields {
-  itemsList: Array<ItemFields>;
-};
-
-export interface ItemFields {
+export interface Item {
   name: string;
   thumbnail: string;
-};
+}
 
-//defines the types for the Context Obj
-export interface SelectedGodContextType {
-  selectedGodState: {
-    selectedGod: number;
-    setSelectedGod: React.Dispatch<React.SetStateAction<number>>;
-  }
+export interface GlobalState {
+  selectedGod: number;
+  godList: Array<God>;
 }
