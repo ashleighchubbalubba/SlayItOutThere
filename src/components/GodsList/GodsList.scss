@@ -13,7 +13,7 @@
 
 .sideBarList {
   overflow-y: scroll;
-  height: 88vh;
+  height: 80vh;
   padding-top: 18px;
 }
 
@@ -33,6 +33,10 @@
   font-size: 20px;
   font-family: Penumbra HalfSerif Std;
   color: #625D52;
+}
+
+.brightenTitle {
+  color: #FAF9F7;
 }
 
 .savedGodsTitle:hover {

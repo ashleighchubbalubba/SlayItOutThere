@@ -4,8 +4,14 @@ import './GodsList.scss';
 import { God as GodType } from '../../types';
 
 //recieves the props from App.tsx
-const GodsList = ({ isSavedGods, setIsSavedGods, selectedGod, setSelectedGod, savedGodsList, allGodsList}: any) => {
-
+const GodsList = ({
+  isSavedGods,
+  setIsSavedGods,
+  selectedGod,
+  setSelectedGod,
+  savedGodsList,
+  allGodsList,
+}: any) => {
   const handleSavedGods = () => {
     setIsSavedGods(true);
   };
@@ -14,18 +20,23 @@ const GodsList = ({ isSavedGods, setIsSavedGods, selectedGod, setSelectedGod, sa
     setIsSavedGods(false);
   };
 
-
   return (
     <>
       <div className="godsList">
         <div className="sideBarHeading">
           <div className="sideBarTitles">
-            <div className="savedGodsTitle" onClick={() => handleSavedGods()}>SAVED GODS</div>
-            <div className="allGodsTitle" onClick={() => handleAllGods()}>ALL GODS</div> 
+            <div className={`${isSavedGods && 'brightenTitle'} savedGodsTitle`} onClick={() => handleSavedGods()}>
+              SAVED GODS
+            </div>
+            <div className={`${!isSavedGods && 'brightenTitle'} allGodsTitle`}  onClick={() => handleAllGods()}>
+              ALL GODS
+            </div>
           </div>
           <div className="sideBarHeadingLine"></div>
         </div>
-        {/* <div><input type="text" className="searchGod"  placeholder="Search God..." /></div> */}
+        <div>
+          <input type="text" className="searchGod" placeholder="Search God..." />
+        </div>
         <div className="sideBarList">
           {isSavedGods &&
             savedGodsList.map((god: GodType) => (
@@ -38,8 +49,7 @@ const GodsList = ({ isSavedGods, setIsSavedGods, selectedGod, setSelectedGod, sa
                   setSelectedGod={setSelectedGod}
                 />
               </div>
-            ))
-          }
+            ))}
           {!isSavedGods &&
             allGodsList.map((god: GodType) => (
               <div>
@@ -51,9 +61,7 @@ const GodsList = ({ isSavedGods, setIsSavedGods, selectedGod, setSelectedGod, sa
                   setSelectedGod={setSelectedGod}
                 />
               </div>
-            ))
-          }
-          
+            ))}
         </div>
       </div>
     </>
