@@ -12,5 +12,5 @@ export interface Item {
 
 export interface GlobalState {
   selectedGod: number;
-  godList: Array<God>;
+  savedGodsList: Array<God>;
 }

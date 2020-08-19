@@ -15,7 +15,7 @@ const GodsList = ({ selectedGod, godList, setSelectedGod }: any) => {
           </div>
           <div className="sideBarHeadingLine"></div>
         </div>
-        <div><input type="text" className="searchGod"  placeholder="Search God..." /></div>
+        {/* <div><input type="text" className="searchGod"  placeholder="Search God..." /></div> */}
         <div className="sideBarList">
           {godList.map((god: GodType) => (
             <div>

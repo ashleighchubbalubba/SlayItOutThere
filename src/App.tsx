@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import GodsList from './components/GodsList';
 import ItemsGrid from './components/ItemsGrid';
-import { sampleGods } from './constants/smiteData';
+import { savedGods } from './constants/smiteData';
 import { God as GodType } from './types/';
 import { GridRow, GridCol } from './components/Grid';
 import { GlobalState } from './types';
@@ -12,7 +12,7 @@ const App = () => {
   //defines initial values of the states
   const initialState: GlobalState = {
     selectedGod: 0,
-    godList: sampleGods as Array<GodType>,
+    savedGodsList: savedGods as Array<GodType>,
   };
 
   //what stores and intializes the default state
@@ -21,12 +21,12 @@ const App = () => {
   //what set the state
   const setSelectedGod = (id: number) => {
     // could also say setState({...state, selectedGod: index})
-    setState({ selectedGod: id, godList: state.godList });
+    setState({ selectedGod: id, savedGodsList: state.savedGodsList });
   };
 
   //what gets the state
   const getSelectedGod = (id: number) => {
-    return state.godList.find((god) => god.id === id);
+    return state.savedGodsList.find((god) => god.id === id);
   };
 
   return (
@@ -36,7 +36,7 @@ const App = () => {
         <GridCol desktop={3}>
           <GodsList
             selectedGod={state.selectedGod}
-            godList={state.godList}
+            godList={state.savedGodsList}
             setSelectedGod={setSelectedGod}
           />
         </GridCol>
