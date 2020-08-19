@@ -105,6 +105,79 @@ export const supportBuild = [
 
 export const savedGods = [
   {
+    id: 31,
+    name: 'Chronus',
+    thumbnail: '/icons/chronus.png',
+  },
+  {
+    id: 32,
+    name: 'Cthulhu',
+    thumbnail: '/icons/cthulhu.png',
+  },
+  {
+    id: 33,
+    name: 'Cuchulainn',
+    thumbnail: '/icons/cuchulainn.png',
+  },
+  {
+    id: 34,
+    name: 'Cupid',
+    thumbnail: '/icons/cupid.png',
+  },
+  {
+    id: 35,
+    name: 'Daji',
+    thumbnail: '/icons/daji.png',
+  },
+  {
+    id: 36,
+    name: 'Discordia',
+    thumbnail: '/icons/discordia.png',
+  },
+  {
+    id: 37,
+    name: 'Erlang Shen',
+    thumbnail: '/icons/erlangshen.png',
+  },
+  {
+    id: 38,
+    name: 'Fafnir',
+    thumbnail: '/icons/fafnir.png',
+  },
+  {
+    id: 39,
+    name: 'Fenrir',
+    thumbnail: '/icons/fenrir.png',
+  },
+  {
+    id: 40,
+    name: 'Freya',
+    thumbnail: '/icons/freya.png',
+  },
+  {
+    id: 41,
+    name: 'Ganesha',
+    thumbnail: '/icons/ganesha.png',
+  },
+  {
+    id: 42,
+    name: 'Geb',
+    thumbnail: '/icons/geb.png',
+  },
+  {
+    id: 43,
+    name: 'Guan Yu',
+    thumbnail: '/icons/guanyu.png',
+  },
+  {
+    id: 44,
+    name: 'Hachiman',
+    thumbnail: '/icons/hachiman.png',
+  }
+];
+
+export const allGods = [
+  {
     id: 1,
     name: 'Achilles',
     thumbnail: '/icons/achilles.png',
@@ -659,19 +732,4 @@ export const savedGods = [
     name: 'Zhong Kui',
     thumbnail: '/icons/zhongkui.png',
   },
-  // {
-  //   id: 108,
-  //   name: 'Kali',
-  //   thumbnail: '/icons/kali.png',
-  // },
-  // {
-  //   id: 109,
-  //   name: 'Kali',
-  //   thumbnail: '/icons/kali.png',
-  // },
-  // {
-  //   id: 110,
-  //   name: 'Kali',
-  //   thumbnail: '/icons/kali.png',
-  // },
 ];
