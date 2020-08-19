@@ -1,113 +1,467 @@
-export const sampleItems = [
+export const allItems = [
   {
-    name: 'Warriors Blessing',
-    thumbnail: '/items/warriors-blessing.webp',
+    name: 'Sovereignty',
+    thumbnail: '/items/sovereignty.jpg',
   },
   {
-    name: 'Berserkers Shield',
-    thumbnail: '/items/berserkers-shield.webp',
+    name: 'Mystical Mail',
+    thumbnail: '/items/mystical-mail.jpg',
+  },
+  {
+    name: 'Midgardian Mail',
+    thumbnail: '/items/midgardian-mail.jpg',
+  },
+  {
+    name: 'Emperor\'s Armor',
+    thumbnail: '/items/emperors-armor.jpg',
+  },
+  {
+    name: 'The Executioner',
+    thumbnail: '/items/the-executioner.jpg',
+  },
+  {
+    name: 'Qin\'s Sais',
+    thumbnail: '/items/qins-sais.jpg',
+  },
+  {
+    name: 'Asi',
+    thumbnail: '/items/asi.jpg',
+  },
+  {
+    name: 'Pythagorem\'s Piece',
+    thumbnail: '/items/pythagorems-piece.jpg',
+  },
+  {
+    name: 'Bancroft\'s Talon',
+    thumbnail: '/items/bancrofts-talon.jpg',
+  },
+  {
+    name: 'Typhon\'s Fang',
+    thumbnail: '/items/typhons-fang.jpg',
+  },
+  {
+    name: 'Soul Gem',
+    thumbnail: '/items/soul-gem.jpg',
+  },
+  {
+    name: 'Titan\'s Bane',
+    thumbnail: '/items/titans-bane.jpg',
+  },
+  {
+    name: 'Brawler\'s Beat Stick',
+    thumbnail: '/items/brawlers-beat-stick.jpg',
+  },
+  {
+    name: 'Jotunn\'s Wrath',
+    thumbnail: '/items/jotunns-wrath.jpg',
+  },
+  {
+    name: 'The Crusher',
+    thumbnail: '/items/the-crusher.jpg',
+  },
+  {
+    name: 'Transcendence',
+    thumbnail: '/items/transcendence.jpg',
+  },
+  {
+    name: 'Hydra\'s Lament',
+    thumbnail: '/items/hydras-lament.jpg',
+  },
+  {
+    name: 'Heartseeker',
+    thumbnail: '/items/heartseeker.jpg',
+  },
+  {
+    name: 'Warrior Tabi',
+    thumbnail: '/items/warrior-tabi.jpg',
   },
   {
     name: 'Ninja Tabi',
-    thumbnail: '/items/ninja-tabi.webp',
+    thumbnail: '/items/ninja-tabi.jpg',
   },
   {
-    name: 'Frostbound Hammer',
-    thumbnail: '/items/frostbound-hammer.webp',
-  },
-  {
-    name: 'Hastened Katana',
-    thumbnail: '/items/hastened-katana.webp',
-  },
-  {
-    name: 'Wind Demon',
-    thumbnail: '/items/wind-demon.webp',
-  },
-  {
-    name: 'Guardians Blessing',
-    thumbnail: '/items/guardians-blessing.webp',
-  },
-  {
-    name: 'Gauntlet Of Thebes',
-    thumbnail: '/items/gauntlet-of-thebes.webp',
+    name: 'Reinforced Greaves',
+    thumbnail: '/items/reinforced-greaves.jpg',
   },
   {
     name: 'Talaria Boots',
-    thumbnail: '/items/talaria-boots.webp',
+    thumbnail: '/items/talaria-boots.jpg',
+  },
+  {
+    name: 'Shoes of the Magi',
+    thumbnail: '/items/shoes-of-the-magi.jpg',
+  },
+  {
+    name: 'Shoes of Focus',
+    thumbnail: '/items/shoes-of-focus.jpg',
+  },
+  {
+    name: 'Reinforced Shoes',
+    thumbnail: '/items/reinforced-shoes.jpg',
+  },
+  {
+    name: 'Traveler\'s Shoes',
+    thumbnail: '/items/travelers-shoes.jpg',
+  },
+  {
+    name: 'Deathbringer',
+    thumbnail: '/items/deathbringer.jpg',
+  },
+  {
+    name: 'Rage',
+    thumbnail: '/items/rage.jpg',
+  },
+  {
+    name: 'Malice',
+    thumbnail: '/items/malice.jpg',
+  },
+  {
+    name: 'Soul Eater',
+    thumbnail: '/items/soul-eater.jpg',
+  },
+  {
+    name: 'Devourer\'s Gauntlet',
+    thumbnail: '/items/devourers-gauntlet.jpg',
+  },
+  {
+    name: 'Bloodforge',
+    thumbnail: '/items/bloodforge.jpg',
+  },
+  {
+    name: 'Witchblade',
+    thumbnail: '/items/witchblade.jpg',
+  },
+  {
+    name: 'Winged Blade',
+    thumbnail: '/items/winged-blade.jpg',
   },
   {
     name: 'Relic Dagger',
-    thumbnail: '/items/relic-dagger.webp',
+    thumbnail: '/items/relic-dagger.jpg',
   },
   {
-    name: 'Sovereignty',
-    thumbnail: '/items/sovereignty.webp',
-  },
-  {
-    name: 'Heartward Amulet',
-    thumbnail: '/items/heartward-amulet.webp',
-  },
-];
-
-export const warriorBuild = [
-  {
-    name: 'Warriors Blessing',
-    thumbnail: '/items/warriors-blessing.webp',
-  },
-  {
-    name: 'Berserkers Shield',
-    thumbnail: '/items/berserkers-shield.webp',
-  },
-  {
-    name: 'Ninja Tabi',
-    thumbnail: '/items/ninja-tabi.webp',
+    name: 'Toxic Blade',
+    thumbnail: '/items/toxic-blade.jpg',
   },
   {
     name: 'Frostbound Hammer',
-    thumbnail: '/items/frostbound-hammer.webp',
+    thumbnail: '/items/frostbound-hammer.jpg',
   },
   {
-    name: 'Hastened Katana',
-    thumbnail: '/items/hastened-katana.webp',
+    name: 'Runeforged Hammer',
+    thumbnail: '/items/runeforged-hammer.jpg',
   },
   {
-    name: 'Wind Demon',
-    thumbnail: '/items/wind-demon.webp',
-  },
-];
-
-export const supportBuild = [
-  {
-    name: 'Guardians Blessing',
-    thumbnail: '/items/guardians-blessing.webp',
+    name: 'The Sledge',
+    thumbnail: '/items/the-sledge.jpg',
   },
   {
-    name: 'Gauntlet Of Thebes',
-    thumbnail: '/items/gauntlet-of-thebes.webp',
+    name: 'Blackthorn Hammer',
+    thumbnail: '/items/blackthorn-hammer.jpg',
   },
   {
-    name: 'Talaria Boots',
-    thumbnail: '/items/talaria-boots.webp',
+    name: 'Shifter\'s Shield',
+    thumbnail: '/items/shifters-shield.jpg',
   },
   {
-    name: 'Relic Dagger',
-    thumbnail: '/items/relic-dagger.webp',
+    name: 'Void Shield',
+    thumbnail: '/items/void-shield.jpg',
   },
   {
-    name: 'Sovereignty',
-    thumbnail: '/items/sovereignty.webp',
+    name: 'Gladiator\'s Shield',
+    thumbnail: '/items/gladiators-shield.jpg',
+  },
+  {
+    name: 'Berserker\'s Shield',
+    thumbnail: '/items/berserkers-shield.jpg',
+  },
+  {
+    name: 'Hide of the Nemean Lion',
+    thumbnail: '/items/hide-of-the-nemean-lion.jpg',
+  },
+  {
+    name: 'Breastplate of Valor',
+    thumbnail: '/items/breastplate-of-valor.jpg',
+  },
+  {
+    name: 'Spectral Armor',
+    thumbnail: '/items/spectral-armor.jpg',
+  },
+  {
+    name: 'Contagion',
+    thumbnail: '/items/contagion.jpg',
+  },
+  {
+    name: 'Magi\'s Cloak',
+    thumbnail: '/items/magis-cloak.jpg',
+  },
+  {
+    name: 'Hide of the Urchin',
+    thumbnail: '/items/hide-of-the-urchin.jpg',
+  },
+  {
+    name: 'Spirit Robe',
+    thumbnail: '/items/spirit-robe.jpg',
+  },
+  {
+    name: 'Mantle of Discord',
+    thumbnail: '/items/mantle-of-discord.jpg',
+  },
+  {
+    name: 'Bulwark of Hope',
+    thumbnail: '/items/bulwark-of-hope.jpg',
+  },
+  {
+    name: 'Pestilence',
+    thumbnail: '/items/pestilence.jpg',
   },
   {
     name: 'Heartward Amulet',
-    thumbnail: '/items/heartward-amulet.webp',
+    thumbnail: '/items/heartward-amulet.jpg',
+  },
+  {
+    name: 'Talisman of Energy',
+    thumbnail: '/items/talisman-of-energy.jpg',
+  },
+  {
+    name: 'Demonic Grip',
+    thumbnail: '/items/demonic-grip.jpg',
+  },
+  {
+    name: 'Telkhines Ring',
+    thumbnail: '/items/telkhines-ring.jpg',
+  },
+  {
+    name: 'Hastened Ring',
+    thumbnail: '/items/hastened-ring.jpg',
+  },
+  {
+    name: 'Ring of Hecate',
+    thumbnail: '/items/ring-of-hecate.jpg',
+  },
+  {
+    name: 'Divine Ruin',
+    thumbnail: '/items/divine-ruin.jpg',
+  },
+  {
+    name: 'Spear of Desolation',
+    thumbnail: '/items/spear-of-desolation.jpg',
+  },
+  {
+    name: 'Obsidian Shard',
+    thumbnail: '/items/obsidian-shard.jpg',
+  },
+  {
+    name: 'Spear of the Magus',
+    thumbnail: '/items/spear-of-the-magus.jpg',
+  },
+  {
+    name: 'Gem of Isolation',
+    thumbnail: '/items/gem-of-isolation.jpg',
+  },
+  {
+    name: 'Warlock\'s Staff',
+    thumbnail: '/items/warlocks-staff.jpg',
+  },
+  {
+    name: 'Ethereal Staff',
+    thumbnail: '/items/ethereal-staff.jpg',
+  },
+  {
+    name: 'Rod of Asclepius',
+    thumbnail: '/items/rod-of-asclepius.jpg',
+  },
+  {
+    name: 'Book of Thoth',
+    thumbnail: '/items/book-of-thoth.jpg',
+  },
+  {
+    name: 'Polynomicon',
+    thumbnail: '/items/polynomicon.jpg',
+  },
+  {
+    name: 'Soul Reaver',
+    thumbnail: '/items/soul-reaver.jpg',
+  },
+  {
+    name: 'Book of the Dead',
+    thumbnail: '/items/book-of-the-dead.jpg',
+  },
+  {
+    name: 'Rod of Tahuti',
+    thumbnail: '/items/rod-of-tahuti.jpg',
+  },
+  {
+    name: 'Chronos\' Pendant',
+    thumbnail: '/items/chronos-pendant.jpg',
+  },
+  {
+    name: 'Doom Orb',
+    thumbnail: '/items/doom-orb.jpg',
+  },
+  {
+    name: 'Charon\'s Coin',
+    thumbnail: '/items/charons-coin.jpg',
+  },
+  {
+    name: 'Runic Shield',
+    thumbnail: '/items/runic-shield.jpg',
+  },
+  {
+    name: 'Ancile',
+    thumbnail: '/items/ancile.jpg',
+  },
+  {
+    name: 'Caduceus Shield',
+    thumbnail: '/items/caduceus-shield.jpg',
+  },
+  {
+    name: 'Celestial Legion Helm',
+    thumbnail: '/items/celestial-legion-helm.jpg',
+  },
+  {
+    name: 'Lotus Crown',
+    thumbnail: '/items/lotus-crown.jpg',
+  },
+  {
+    name: 'Jade Emperor\'s Crown',
+    thumbnail: '/items/jade-emperors-crown.jpg',
+  },
+  {
+    name: 'Tyrannical Plate Helm',
+    thumbnail: '/items/tyrannical-plate-helm.jpg',
+  },
+  {
+    name: 'Odysseus\' Bow',
+    thumbnail: '/items/odysseus-bow.jpg',
+  },
+  {
+    name: 'Ichaival',
+    thumbnail: '/items/ichaival.jpg',
+  },
+  {
+    name: 'Silverbranch Bow',
+    thumbnail: '/items/silverbranch-bow.jpg',
+  },
+  {
+    name: 'Atalanta\'s Bow',
+    thumbnail: '/items/atalantas-bow.jpg',
+  },
+  {
+    name: 'Stone of Gaia',
+    thumbnail: '/items/stone-of-gaia.jpg',
+  },
+  {
+    name: 'Shield of Regrowth',
+    thumbnail: '/items/shield-of-regrowth.jpg',
+  },
+  {
+    name: 'Mail of Renewal',
+    thumbnail: '/items/mail-of-renewal.jpg',
+  },
+  {
+    name: 'Gauntlet of Thebes',
+    thumbnail: '/items/gauntlet-of-thebes.jpg',
+  },
+  {
+    name: 'Wind Demon',
+    thumbnail: '/items/wind-demon.jpg',
+  },
+  {
+    name: 'Poisoned Star',
+    thumbnail: '/items/poisoned-star.jpg',
+  },
+  {
+    name: 'Shadowsteel Shuriken',
+    thumbnail: '/items/shadowsteel-shuriken.jpg',
+  },
+  {
+    name: 'Stone Cutting Sword',
+    thumbnail: '/items/stone-cutting-sword.jpg',
+  },
+  {
+    name: 'Hastened Katana',
+    thumbnail: '/items/hastened-katana.jpg',
+  },
+  {
+    name: 'Golden Blade',
+    thumbnail: '/items/golden-blade.jpg',
+  },
+  {
+    name: 'Serrated Edge',
+    thumbnail: '/items/serrated-edge.jpg',
+  },
+  {
+    name: 'Genji\'s Guard',
+    thumbnail: '/items/genjis-guard.jpg',
+  },
+  {
+    name: 'Oni Hunter\'s Garb',
+    thumbnail: '/items/oni-hunters-garb.jpg',
+  },
+  {
+    name: 'Shogun\'s Kusari',
+    thumbnail: '/items/shoguns-kusari.jpg',
+  },
+  {
+    name: 'Void Stone',
+    thumbnail: '/items/void-stone.jpg',
+  },
+  {
+    name: 'Stone of Fal',
+    thumbnail: '/items/stone-of-fal.jpg',
+  },
+  {
+    name: 'Bumba\'s Mask',
+    thumbnail: '/items/bumbas-mask.jpg',
+  },
+  {
+    name: 'Rangda\'s Mask',
+    thumbnail: '/items/rangdas-mask.jpg',
+  },
+  {
+    name: 'Lono\'s Mask',
+    thumbnail: '/items/lonos-mask.jpg',
+  },
+  {
+    name: 'Staff of Myrddin',
+    thumbnail: '/items/staff-of-myrddin.jpg',
+  },
+  {
+    name: 'Pridwen',
+    thumbnail: '/items/pridwen.jpg',
+  },
+  {
+    name: 'Arondight',
+    thumbnail: '/items/arondight.jpg',
+  },
+  {
+    name: 'Fail-not',
+    thumbnail: '/items/fail-not.jpg',
+  },
+  {
+    name: 'Bristlebush Acorn',
+    thumbnail: '/items/bristlebush-acorn.jpg',
+  },
+  {
+    name: 'Thistlethorn Acorn',
+    thumbnail: '/items/thistlethorn-acorn.jpg',
+  },
+  {
+    name: 'Evergreen Acorn',
+    thumbnail: '/items/evergreen-acorn.jpg',
+  },
+  {
+    name: 'Thickbark Acorn',
+    thumbnail: '/items/thickbark-acorn.jpg',
   },
 ];
 
 export const savedGods = [
   {
     id: 31,
-    name: 'Chronus',
-    thumbnail: '/icons/chronus.png',
+    name: 'Chronos',
+    thumbnail: '/icons/chronos.png',
   },
   {
     id: 32,
@@ -314,7 +668,7 @@ export const allGods = [
   },
   {
     id: 28,
-    name: 'Chang e',
+    name: 'Chang \'e',
     thumbnail: '/icons/change.png',
   },
   {
@@ -329,8 +683,8 @@ export const allGods = [
   },
   {
     id: 31,
-    name: 'Chronus',
-    thumbnail: '/icons/chronus.png',
+    name: 'Chronos',
+    thumbnail: '/icons/chronos.png',
   },
   {
     id: 32,
