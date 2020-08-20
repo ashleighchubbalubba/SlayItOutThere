@@ -14,5 +14,4 @@ export interface GlobalState {
   isSavedGods: Boolean;
   selectedGod: number;
   savedGodsList: Array<God>;
-  allGodsList: Array<God>;
 }

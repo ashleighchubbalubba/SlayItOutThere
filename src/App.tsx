@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import GodsList from './components/GodsList';
 import ItemsGrid from './components/ItemsGrid';
-import { savedGods, allGods } from './constants/smiteData';
+import { savedGods } from './constants/smiteData';
 import { God as GodType } from './types/';
 import { GridRow, GridCol } from './components/Grid';
 import { GlobalState } from './types';
@@ -14,7 +14,6 @@ const App = () => {
     isSavedGods: true,
     selectedGod: 0,
     savedGodsList: savedGods as Array<GodType>,
-    allGodsList: allGods as Array<GodType>,
   };
 
   //what stores and intializes the default state
@@ -22,18 +21,23 @@ const App = () => {
 
   //sets Saved God State
   const setIsSavedGod = (isSavedGods: Boolean) => {
-    setState({ isSavedGods: isSavedGods, selectedGod: state.selectedGod, savedGodsList: state.savedGodsList, allGodsList: state.allGodsList });
+    setState({ isSavedGods: isSavedGods, selectedGod: state.selectedGod, savedGodsList: state.savedGodsList });
   };
 
   //sets Selected God State
   const setSelectedGod = (id: number) => {
     // could also say setState({...state, selectedGod: index})
-    setState({ selectedGod: id, isSavedGods: state.isSavedGods, savedGodsList: state.savedGodsList, allGodsList: state.allGodsList });
+    setState({ selectedGod: id, isSavedGods: state.isSavedGods, savedGodsList: state.savedGodsList });
   };
 
   //what gets the state
   const getSelectedGod = (id: number) => {
     return state.savedGodsList.find((god) => god.id === id);
+  };
+
+  //filters saved god list
+  const setSavedGodsList = (newList: Array<GodType>) => {
+    return state.savedGodsList = newList;
   };
 
   return (
@@ -47,7 +51,7 @@ const App = () => {
             selectedGod={state.selectedGod}
             setSelectedGod={setSelectedGod}
             savedGodsList={state.savedGodsList}
-            allGodsList={state.allGodsList}
+            setsavedGodsList={setSavedGodsList}
           />
         </GridCol>
         <GridCol desktop={9} className="rightHalf">
