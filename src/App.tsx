@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import GodsList from './components/GodsList';
 import ItemsGrid from './components/ItemsGrid';
-import { savedGods } from './constants/smiteData';
+import BuildGrid from './components/BuildGrid';
+import { savedGods, allGods } from './constants/smiteData';
 import { God as GodType } from './types/';
 import { GridRow, GridCol } from './components/Grid';
 import { GlobalState } from './types';
 import './App.css';
 
 const App = () => {
-
   //defines initial values of the states
   const initialState: GlobalState = {
     isSavedGods: true,
@@ -21,23 +21,27 @@ const App = () => {
 
   //sets Saved God State
   const setIsSavedGod = (isSavedGods: Boolean) => {
-    setState({ isSavedGods: isSavedGods, selectedGod: state.selectedGod, savedGodsList: state.savedGodsList });
+    setState({
+      isSavedGods: isSavedGods,
+      selectedGod: state.selectedGod,
+      savedGodsList: state.savedGodsList,
+    });
   };
 
   //sets Selected God State
   const setSelectedGod = (id: number) => {
     // could also say setState({...state, selectedGod: index})
-    setState({ selectedGod: id, isSavedGods: state.isSavedGods, savedGodsList: state.savedGodsList });
+    setState({
+      selectedGod: id,
+      isSavedGods: state.isSavedGods,
+      savedGodsList: state.savedGodsList,
+    });
   };
 
   //what gets the state
   const getSelectedGod = (id: number) => {
-    return state.savedGodsList.find((god) => god.id === id);
-  };
-
-  //filters saved god list
-  const setSavedGodsList = (newList: Array<GodType>) => {
-    return state.savedGodsList = newList;
+    if (state.isSavedGods) return state.savedGodsList.find((god) => god.id === id);
+    else return allGods.find((god) => god.id === id);
   };
 
   return (
@@ -51,16 +55,24 @@ const App = () => {
             selectedGod={state.selectedGod}
             setSelectedGod={setSelectedGod}
             savedGodsList={state.savedGodsList}
-            setsavedGodsList={setSavedGodsList}
           />
         </GridCol>
         <GridCol desktop={9} className="rightHalf">
           <GridRow desktop={9} className="miniGrid">
-            <GridCol desktop={2}></GridCol>
-            <GridCol desktop={5}>
-              <ItemsGrid activeGod={getSelectedGod(state.selectedGod)} />
-            </GridCol>
-            <GridCol desktop={2}></GridCol>
+            {state.isSavedGods && <GridCol desktop={2}></GridCol>}
+            {state.isSavedGods && (
+              <GridCol desktop={5}>
+                <ItemsGrid activeGod={getSelectedGod(state.selectedGod)} />
+              </GridCol>
+            )}
+            {state.isSavedGods && <GridCol desktop={2}></GridCol>}
+            {!state.isSavedGods && <GridCol desktop={1}></GridCol>}
+            {!state.isSavedGods && (
+              <GridCol desktop={7}>
+                <BuildGrid activeGod={getSelectedGod(state.selectedGod)} />
+              </GridCol>
+            )}
+            {!state.isSavedGods && <GridCol desktop={1}></GridCol>}
           </GridRow>
         </GridCol>
       </GridRow>

@@ -1,0 +1,34 @@
+.buildWrapper {
+    width: 100%;
+    height: 90vh;
+    margin: auto;
+    margin-top: 3%;
+}
+
+.buildHeading {
+    height: 12vh;
+    width: 100%;
+}
+
+.buildGodProfile {
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+}
+
+.buildGodIcon {
+    width: 43px;
+    border-radius: 100%;
+    border: 2px solid #85784a;
+    margin-right: 13px;
+    box-shadow: 0px 0px 10px #85784a;
+}
+
+.buildGodName {
+    height: 44px;
+    line-height: 56px;
+    font-family: Penumbra HalfSerif Std;
+    font-size: 35px;
+    color: #FAF9F7;
+}
+

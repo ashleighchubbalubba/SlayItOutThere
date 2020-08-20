@@ -10,7 +10,6 @@ const GodsList = ({
   selectedGod,
   setSelectedGod,
   savedGodsList,
-  setSavedGodsList,
 }: any) => {
   //Changing between tabs
   const handleSavedGods = (bool: Boolean) => {
