@@ -1,9 +1,13 @@
 import React from 'react';
 import './BuildGrid.scss';
+import { allItems } from '../../constants/smiteData';
+import Item from '../Item';
+import { Item as ItemType } from '../../types';
 
 const BuildGrid = ({ activeGod }: any) => {
   let build,
-    name, thumbnail = undefined;
+    name,
+    thumbnail = undefined;
 
   if (activeGod) {
     build = activeGod.build;
@@ -16,21 +20,24 @@ const BuildGrid = ({ activeGod }: any) => {
       <div className="buildWrapper">
         <div className="buildHeading">
           <div className="buildGodProfile">
-            <img
-              src={thumbnail}
-              alt=""
-              className="buildGodIcon"
-            />
+            <img src={thumbnail} alt="" className="buildGodIcon" />
             <div className="buildGodName">{name}</div>
           </div>
           <div className="buildLowerHeading">
-            <div className="buildSearchBar"></div>
-            <div className="buildSaveButton"></div>
+            <input type="text" className="buildSearchBar" placeholder="Search Item..." />
+            <button className="buildSaveButton">SAVE</button>
           </div>
         </div>
-
-        <div className="buildGrid"></div>
-        <div className="buildItems"></div>
+        <div className="buildGrid">
+          {allItems.map((item: ItemType) => (
+            <Item name={item.name} thumbnail={item.thumbnail} />
+          ))}
+        </div>
+        <div className="buildItems">
+          {(build) && build.map((item: ItemType) => (
+            <Item name={item.name} thumbnail={item.thumbnail} />
+          ))}
+        </div>
       </div>
     </>
   );

@@ -58,15 +58,13 @@ const GodsList = ({
           </div>
           <div className="sideBarHeadingLine"></div>
         </div>
-        <div>
-          <input
-            type="text"
-            className="searchGod"
-            onChange={handleSearchGods}
-            value={searchTerm}
-            placeholder="Search God..."
-          />
-        </div>
+        <input
+          type="text"
+          className="searchGod"
+          onChange={handleSearchGods}
+          value={searchTerm}
+          placeholder="Search God..."
+        />
         <div className="sideBarList">
           {searchResults.map((god: GodType) => (
             <div>

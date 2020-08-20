@@ -1,34 +1,94 @@
 .buildWrapper {
-    width: 100%;
-    height: 90vh;
-    margin: auto;
-    margin-top: 3%;
+  width: 100%;
+  height: 93vh;
+  margin: auto;
+  position: relative;
 }
 
 .buildHeading {
-    height: 12vh;
-    width: 100%;
+  height: 12vh;
+  width: 100%;
 }
 
 .buildGodProfile {
-    text-align: left;
-    display: flex;
-    flex-direction: row;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
 }
 
 .buildGodIcon {
-    width: 43px;
-    border-radius: 100%;
-    border: 2px solid #85784a;
-    margin-right: 13px;
-    box-shadow: 0px 0px 10px #85784a;
+  width: 43px;
+  border-radius: 100%;
+  border: 2px solid #85784a;
+  margin-right: 13px;
+  box-shadow: 0px 0px 10px #85784a;
 }
 
 .buildGodName {
-    height: 44px;
-    line-height: 56px;
-    font-family: Penumbra HalfSerif Std;
-    font-size: 35px;
-    color: #FAF9F7;
+  height: 44px;
+  line-height: 56px;
+  font-family: Penumbra HalfSerif Std;
+  font-size: 35px;
+  color: #faf9f7;
 }
 
+.buildLowerHeading {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1vh;
+}
+
+.buildSearchBar {
+  background-color: #423d33;
+  border-width: 0px;
+  width: 30%;
+  height: 28px;
+  border-radius: 3.5px;
+  color: #e8e6e1;
+  padding-left: 7px;
+  margin-top: 9px;
+  font-size: 16.5px;
+}
+
+.buildSearchBar:focus {
+  outline: 0;
+  background-color: #504a40;
+}
+
+.buildSaveButton {
+  width: 80px;
+  height: 40px;
+  background-color: #423d33;
+  border-radius: 3px;
+  color: #faf9f7;
+  font-family: Penumbra HalfSerif Std;
+  font-size: 18px;
+  outline: none;
+  border: none;
+  padding-top: 5px;
+}
+
+.buildSaveButton:hover {
+  background-color: #504a40;
+  cursor: pointer;
+}
+
+.buildGrid {
+  display: grid;
+  grid-template-columns: 140px 140px 140px 140px 140px;
+  height: 58vh;
+  overflow-y: scroll;
+  margin-top: 3vh;
+  width: 100%;
+  background-color: #1b1813;
+}
+
+.buildItems {
+  display: grid;
+  grid-template-columns: 120px 120px 120px 120px 120px 120px;
+  width: 100%;
+  height: 17vh;
+  background-color: white;
+  bottom: 0;
+  position: absolute;
+}
