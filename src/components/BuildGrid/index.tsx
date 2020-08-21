@@ -1,6 +1,6 @@
 import React from 'react';
 import './BuildGrid.scss';
-import { allItems } from '../../constants/smiteData';
+import { allItems, sampleBuild } from '../../constants/smiteData';
 import Item from '../Item';
 import { Item as ItemType } from '../../types';
 
@@ -24,9 +24,9 @@ const BuildGrid = ({ activeGod }: any) => {
   };
 
   React.useEffect(() => {
-      const results = allItems.filter((item: any) =>
+    const results = allItems.filter((item: any) =>
       item.name.toLowerCase().includes(searchTerm.toLowerCase())
-      );
+    );
 
     setSearchResults(results);
   }, [searchTerm]);
@@ -40,7 +40,13 @@ const BuildGrid = ({ activeGod }: any) => {
             <div className="buildGodName">{name}</div>
           </div>
           <div className="buildLowerHeading">
-            <input type="text" className="buildSearchBar" placeholder="Search Item..." onChange={handleSearchItems} value={searchTerm}/>
+            <input
+              type="text"
+              className="buildSearchBar"
+              placeholder="Search Item..."
+              onChange={handleSearchItems}
+              value={searchTerm}
+            />
             <button className="buildSaveButton">SAVE</button>
           </div>
         </div>
@@ -50,8 +56,11 @@ const BuildGrid = ({ activeGod }: any) => {
           ))}
         </div>
         <div className="buildItems">
-          {build &&
-            build.map((item: ItemType) => <Item name={item.name} thumbnail={item.thumbnail} />)}
+          {/* {build &&
+            build.map((item: ItemType) => <Item name={item.name} thumbnail={item.thumbnail} />)} */}
+          {sampleBuild.map((item: ItemType) => (
+            <Item name={item.name} thumbnail={item.thumbnail} />
+          ))}
         </div>
       </div>
     </>

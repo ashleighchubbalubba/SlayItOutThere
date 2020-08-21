@@ -1,3 +1,30 @@
+export const sampleBuild = [
+  {
+    name: 'Sovereignty',
+    thumbnail: '/items/sovereignty.jpg',
+  },
+  {
+    name: 'Mystical Mail',
+    thumbnail: '/items/mystical-mail.jpg',
+  },
+  {
+    name: 'Midgardian Mail',
+    thumbnail: '/items/midgardian-mail.jpg',
+  },
+  {
+    name: "Emperor's Armor",
+    thumbnail: '/items/emperors-armor.jpg',
+  },
+  {
+    name: 'The Executioner',
+    thumbnail: '/items/the-executioner.jpg',
+  },
+  {
+    name: "Qin's Sais",
+    thumbnail: '/items/qins-sais.jpg',
+  },
+];
+
 export const allItems = [
   {
     name: 'Sovereignty',
@@ -12,7 +39,7 @@ export const allItems = [
     thumbnail: '/items/midgardian-mail.jpg',
   },
   {
-    name: 'Emperor\'s Armor',
+    name: "Emperor's Armor",
     thumbnail: '/items/emperors-armor.jpg',
   },
   {
@@ -20,7 +47,7 @@ export const allItems = [
     thumbnail: '/items/the-executioner.jpg',
   },
   {
-    name: 'Qin\'s Sais',
+    name: "Qin's Sais",
     thumbnail: '/items/qins-sais.jpg',
   },
   {
@@ -28,15 +55,15 @@ export const allItems = [
     thumbnail: '/items/asi.jpg',
   },
   {
-    name: 'Pythagorem\'s Piece',
+    name: "Pythagorem's Piece",
     thumbnail: '/items/pythagorems-piece.jpg',
   },
   {
-    name: 'Bancroft\'s Talon',
+    name: "Bancroft's Talon",
     thumbnail: '/items/bancrofts-talon.jpg',
   },
   {
-    name: 'Typhon\'s Fang',
+    name: "Typhon's Fang",
     thumbnail: '/items/typhons-fang.jpg',
   },
   {
@@ -44,15 +71,15 @@ export const allItems = [
     thumbnail: '/items/soul-gem.jpg',
   },
   {
-    name: 'Titan\'s Bane',
+    name: "Titan's Bane",
     thumbnail: '/items/titans-bane.jpg',
   },
   {
-    name: 'Brawler\'s Beat Stick',
+    name: "Brawler's Beat Stick",
     thumbnail: '/items/brawlers-beat-stick.jpg',
   },
   {
-    name: 'Jotunn\'s Wrath',
+    name: "Jotunn's Wrath",
     thumbnail: '/items/jotunns-wrath.jpg',
   },
   {
@@ -64,7 +91,7 @@ export const allItems = [
     thumbnail: '/items/transcendence.jpg',
   },
   {
-    name: 'Hydra\'s Lament',
+    name: "Hydra's Lament",
     thumbnail: '/items/hydras-lament.jpg',
   },
   {
@@ -100,7 +127,7 @@ export const allItems = [
     thumbnail: '/items/reinforced-shoes.jpg',
   },
   {
-    name: 'Traveler\'s Shoes',
+    name: "Traveler's Shoes",
     thumbnail: '/items/travelers-shoes.jpg',
   },
   {
@@ -120,7 +147,7 @@ export const allItems = [
     thumbnail: '/items/soul-eater.jpg',
   },
   {
-    name: 'Devourer\'s Gauntlet',
+    name: "Devourer's Gauntlet",
     thumbnail: '/items/devourers-gauntlet.jpg',
   },
   {
@@ -160,7 +187,7 @@ export const allItems = [
     thumbnail: '/items/blackthorn-hammer.jpg',
   },
   {
-    name: 'Shifter\'s Shield',
+    name: "Shifter's Shield",
     thumbnail: '/items/shifters-shield.jpg',
   },
   {
@@ -168,11 +195,11 @@ export const allItems = [
     thumbnail: '/items/void-shield.jpg',
   },
   {
-    name: 'Gladiator\'s Shield',
+    name: "Gladiator's Shield",
     thumbnail: '/items/gladiators-shield.jpg',
   },
   {
-    name: 'Berserker\'s Shield',
+    name: "Berserker's Shield",
     thumbnail: '/items/berserkers-shield.jpg',
   },
   {
@@ -192,7 +219,7 @@ export const allItems = [
     thumbnail: '/items/contagion.jpg',
   },
   {
-    name: 'Magi\'s Cloak',
+    name: "Magi's Cloak",
     thumbnail: '/items/magis-cloak.jpg',
   },
   {
@@ -260,7 +287,7 @@ export const allItems = [
     thumbnail: '/items/gem-of-isolation.jpg',
   },
   {
-    name: 'Warlock\'s Staff',
+    name: "Warlock's Staff",
     thumbnail: '/items/warlocks-staff.jpg',
   },
   {
@@ -292,7 +319,7 @@ export const allItems = [
     thumbnail: '/items/rod-of-tahuti.jpg',
   },
   {
-    name: 'Chronos\' Pendant',
+    name: "Chronos' Pendant",
     thumbnail: '/items/chronos-pendant.jpg',
   },
   {
@@ -300,7 +327,7 @@ export const allItems = [
     thumbnail: '/items/doom-orb.jpg',
   },
   {
-    name: 'Charon\'s Coin',
+    name: "Charon's Coin",
     thumbnail: '/items/charons-coin.jpg',
   },
   {
@@ -324,7 +351,7 @@ export const allItems = [
     thumbnail: '/items/lotus-crown.jpg',
   },
   {
-    name: 'Jade Emperor\'s Crown',
+    name: "Jade Emperor's Crown",
     thumbnail: '/items/jade-emperors-crown.jpg',
   },
   {
@@ -332,7 +359,7 @@ export const allItems = [
     thumbnail: '/items/tyrannical-plate-helm.jpg',
   },
   {
-    name: 'Odysseus\' Bow',
+    name: "Odysseus' Bow",
     thumbnail: '/items/odysseus-bow.jpg',
   },
   {
@@ -344,7 +371,7 @@ export const allItems = [
     thumbnail: '/items/silverbranch-bow.jpg',
   },
   {
-    name: 'Atalanta\'s Bow',
+    name: "Atalanta's Bow",
     thumbnail: '/items/atalantas-bow.jpg',
   },
   {
@@ -392,15 +419,15 @@ export const allItems = [
     thumbnail: '/items/serrated-edge.jpg',
   },
   {
-    name: 'Genji\'s Guard',
+    name: "Genji's Guard",
     thumbnail: '/items/genjis-guard.jpg',
   },
   {
-    name: 'Oni Hunter\'s Garb',
+    name: "Oni Hunter's Garb",
     thumbnail: '/items/oni-hunters-garb.jpg',
   },
   {
-    name: 'Shogun\'s Kusari',
+    name: "Shogun's Kusari",
     thumbnail: '/items/shoguns-kusari.jpg',
   },
   {
@@ -412,15 +439,15 @@ export const allItems = [
     thumbnail: '/items/stone-of-fal.jpg',
   },
   {
-    name: 'Bumba\'s Mask',
+    name: "Bumba's Mask",
     thumbnail: '/items/bumbas-mask.jpg',
   },
   {
-    name: 'Rangda\'s Mask',
+    name: "Rangda's Mask",
     thumbnail: '/items/rangdas-mask.jpg',
   },
   {
-    name: 'Lono\'s Mask',
+    name: "Lono's Mask",
     thumbnail: '/items/lonos-mask.jpg',
   },
   {
@@ -462,6 +489,7 @@ export const savedGods = [
     id: 31,
     name: 'Chronos',
     thumbnail: '/icons/chronos.png',
+    build: sampleBuild,
   },
   {
     id: 32,
@@ -527,7 +555,7 @@ export const savedGods = [
     id: 44,
     name: 'Hachiman',
     thumbnail: '/icons/hachiman.png',
-  }
+  },
 ];
 
 export const allGods = [
@@ -668,7 +696,7 @@ export const allGods = [
   },
   {
     id: 28,
-    name: 'Chang \'e',
+    name: "Chang 'e",
     thumbnail: '/icons/change.png',
   },
   {
@@ -685,6 +713,7 @@ export const allGods = [
     id: 31,
     name: 'Chronos',
     thumbnail: '/icons/chronos.png',
+    build: sampleBuild,
   },
   {
     id: 32,
@@ -1087,3 +1116,5 @@ export const allGods = [
     thumbnail: '/icons/zhongkui.png',
   },
 ];
+
+
