@@ -6,7 +6,9 @@ const Item = ({ name, thumbnail }: ItemType) => {
   return (
     <>
       <div className="itemWrapper">
-        <img src={thumbnail} alt="Item Thumbnail" className="itemThumbnail" />
+        <div className="thumbnailOverlay">
+          <img src={thumbnail} alt="Item Thumbnail" className="itemThumbnail" />
+        </div>
         <div className="itemName">{name}</div>
       </div>
     </>

@@ -15,6 +15,22 @@ const BuildGrid = ({ activeGod }: any) => {
     thumbnail = activeGod.thumbnail;
   }
 
+  //Search Bar
+  const [searchTerm, setSearchTerm] = React.useState('');
+  const [searchResults, setSearchResults] = React.useState(allItems);
+
+  const handleSearchItems = (event: React.FormEvent<HTMLInputElement>): void => {
+    setSearchTerm(event.currentTarget.value);
+  };
+
+  React.useEffect(() => {
+      const results = allItems.filter((item: any) =>
+      item.name.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+
+    setSearchResults(results);
+  }, [searchTerm]);
+
   return (
     <>
       <div className="buildWrapper">
@@ -24,19 +40,18 @@ const BuildGrid = ({ activeGod }: any) => {
             <div className="buildGodName">{name}</div>
           </div>
           <div className="buildLowerHeading">
-            <input type="text" className="buildSearchBar" placeholder="Search Item..." />
+            <input type="text" className="buildSearchBar" placeholder="Search Item..." onChange={handleSearchItems} value={searchTerm}/>
             <button className="buildSaveButton">SAVE</button>
           </div>
         </div>
         <div className="buildGrid">
-          {allItems.map((item: ItemType) => (
+          {searchResults.map((item: ItemType) => (
             <Item name={item.name} thumbnail={item.thumbnail} />
           ))}
         </div>
         <div className="buildItems">
-          {(build) && build.map((item: ItemType) => (
-            <Item name={item.name} thumbnail={item.thumbnail} />
-          ))}
+          {build &&
+            build.map((item: ItemType) => <Item name={item.name} thumbnail={item.thumbnail} />)}
         </div>
       </div>
     </>
