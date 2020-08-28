@@ -1,6 +1,6 @@
 import React from 'react';
 import './BuildGrid.scss';
-import { allItems, sampleBuild } from '../../constants/smiteData';
+import { allItems } from '../../constants/smiteData';
 import Item from '../Item';
 import { Item as ItemType } from '../../types';
 
@@ -58,9 +58,9 @@ const BuildGrid = ({ activeGod }: any) => {
         <div className="buildItems">
           {/* {build &&
             build.map((item: ItemType) => <Item name={item.name} thumbnail={item.thumbnail} />)} */}
-          {sampleBuild.map((item: ItemType) => (
+          {/* {sampleBuild.map((item: ItemType) => (
             <Item name={item.name} thumbnail={item.thumbnail} />
-          ))}
+          ))} */}
         </div>
       </div>
     </>
