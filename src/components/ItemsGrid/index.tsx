@@ -17,7 +17,7 @@ const ItemsGrid = ({ activeGod }: any) => {
         <div className="itemsListTitle">{name}</div>
         <div className="itemsGrid">
           {/* do it only if the selectedGod has a build */}
-          {build && build.map((item: ItemType) => <Item name={item.name} thumbnail={item.thumbnail} />)}
+          {build && build.map((item: ItemType) => <Item id={item.id} name={item.name} thumbnail={item.thumbnail} />)}
         </div>
       </div>
     </>

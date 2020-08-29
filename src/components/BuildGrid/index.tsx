@@ -52,10 +52,17 @@ const BuildGrid = ({ activeGod }: any) => {
         </div>
         <div className="buildGrid">
           {searchResults.map((item: ItemType) => (
-            <Item name={item.name} thumbnail={item.thumbnail} />
+            <Item id={item.id} name={item.name} thumbnail={item.thumbnail} />
           ))}
         </div>
-        <div className="buildItems">
+        <div className="buildItemsSection">
+          <div className="sectionBuildTab">
+            <button className="sectionBuildTabButton ">Starter</button>
+            <button className="sectionBuildTabButton ">Core</button>
+            <button className="sectionBuildTabButton ">Situational</button>
+            <button className="sectionBuildTabButton ">Relics</button>
+          </div>
+          <div className="buildItems"></div>
           {/* {build &&
             build.map((item: ItemType) => <Item name={item.name} thumbnail={item.thumbnail} />)} */}
           {/* {sampleBuild.map((item: ItemType) => (
