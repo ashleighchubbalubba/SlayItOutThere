@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { BuildState } from '../../types';
-import { allGods } from '../../constants/smiteData';
+import { allGods, sampleBuild } from '../../constants/smiteData';
+import Item from '../Item';
+import { Item as ItemType } from '../../types';
 import './BuildSections.scss';
 
 const BuildSections = ({ activeGod }: any) => {
@@ -51,6 +53,9 @@ const BuildSections = ({ activeGod }: any) => {
           </button>
         </div>
         <div className="buildItems">
+            {/* {build &&build.map((item: ItemType) => <Item id={item.id} name={item.name} thumbnail={item.thumbnail} />)} */}
+            {/* {sampleBuild && sampleBuild.map((item: ItemType) => <Item id={item.id} name={item.name} thumbnail={item.thumbnail} />)} */}
+            
             <div className="buildSingleItem"></div>
             <div className="buildSingleItem"></div>
             <div className={`${state.buildSection === 3 && 'buildRelicItem'} buildSingleItem`}></div>
@@ -58,11 +63,7 @@ const BuildSections = ({ activeGod }: any) => {
             <div className={`${state.buildSection === 3 && 'buildRelicItem'} buildSingleItem`}></div>
             <div className={`${state.buildSection === 3 && 'buildRelicItem'} buildSingleItem`}></div>
         </div>
-        {/* {build &&
-            build.map((item: ItemType) => <Item name={item.name} thumbnail={item.thumbnail} />)} */}
-        {/* {sampleBuild.map((item: ItemType) => (
-            <Item name={item.name} thumbnail={item.thumbnail} />
-          ))} */}
+
       </div>
     </>
   );

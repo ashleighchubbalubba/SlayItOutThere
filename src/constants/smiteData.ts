@@ -1,3 +1,36 @@
+export const sampleBuild = [
+  {
+    id: 200,
+    name: 'Sovereignty',
+    thumbnail: '/items/sovereignty.jpg',
+  },
+  {
+    id: 201,
+    name: 'Mystical Mail',
+    thumbnail: '/items/mystical-mail.jpg',
+  },
+  {
+    id: 202,
+    name: 'Midgardian Mail',
+    thumbnail: '/items/midgardian-mail.jpg',
+  },
+  {
+    id: 203,
+    name: "Emperor's Armor",
+    thumbnail: '/items/emperors-armor.jpg',
+  },
+  {
+    id: 204,
+    name: 'The Executioner',
+    thumbnail: '/items/the-executioner.jpg',
+  },
+  {
+    id: 205,
+    name: "Qin's Sais",
+    thumbnail: '/items/qins-sais.jpg',
+  },
+];
+
 export const allItems = [
   {
     id: 200,
@@ -691,7 +724,7 @@ export const allItems = [
   },
   {
     id: 338,
-    name: 'Sanctuary',
+    name: 'Aegis',
     thumbnail: '/relics/Sanctuary_Relic.png',
   },
   {
