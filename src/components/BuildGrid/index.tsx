@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './BuildGrid.scss';
 import { allItems, allGods } from '../../constants/smiteData';
 import Item from '../Item';
 import { Item as ItemType } from '../../types';
-import { BuildState } from '../../types';
+import BuildSections from '../BuildSections';
 
 const BuildGrid = ({ activeGod }: any) => {
   let build, name, thumbnail;
@@ -33,19 +33,6 @@ const BuildGrid = ({ activeGod }: any) => {
     setSearchResults(results);
   }, [searchTerm]);
 
-  //State for sections of build
-  const initialBuildState: BuildState = {
-    buildSection: 0,
-  };
-
-  const [state, setState] = useState(initialBuildState);
-
-  const setBuildState = (buildState: number) => {
-    setState({
-      buildSection: buildState,
-    });
-  };
-
   return (
     <>
       <div className="buildWrapper">
@@ -70,20 +57,7 @@ const BuildGrid = ({ activeGod }: any) => {
             <Item id={item.id} name={item.name} thumbnail={item.thumbnail} />
           ))}
         </div>
-        <div className="buildItemsSection">
-          <div className="sectionBuildTab">
-            <button className="sectionBuildTabButton ">Starter</button>
-            <button className="sectionBuildTabButton ">Core</button>
-            <button className="sectionBuildTabButton ">Situational</button>
-            <button className="sectionBuildTabButton ">Relics</button>
-          </div>
-          <div className="buildItems"></div>
-          {/* {build &&
-            build.map((item: ItemType) => <Item name={item.name} thumbnail={item.thumbnail} />)} */}
-          {/* {sampleBuild.map((item: ItemType) => (
-            <Item name={item.name} thumbnail={item.thumbnail} />
-          ))} */}
-        </div>
+        <BuildSections activeGod={activeGod}/>
       </div>
     </>
   );
