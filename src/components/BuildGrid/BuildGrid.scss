@@ -59,20 +59,20 @@
   background-color: #504a40;
 }
 
-.buildSaveButton {
+.buildDisplayButton {
   width: 80px;
   height: 40px;
   background-color: #423d33;
   border-radius: 3px;
   color: #faf9f7;
   font-family: Penumbra HalfSerif Std;
-  font-size: 18px;
+  font-size: 15px;
   outline: none;
   border: none;
   padding-top: 5px;
 }
 
-.buildSaveButton:hover {
+.buildDisplayButton:hover {
   background-color: #504a40;
   cursor: pointer;
 }

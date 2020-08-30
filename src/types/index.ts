@@ -29,3 +29,7 @@ export interface GlobalState {
   selectedGod: number;
   savedGodsList: Array<God>;
 }
+
+export interface BuildState {
+  buildSection: number;
+}

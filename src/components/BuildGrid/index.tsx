@@ -1,18 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './BuildGrid.scss';
-import { allItems } from '../../constants/smiteData';
+import { allItems, allGods } from '../../constants/smiteData';
 import Item from '../Item';
 import { Item as ItemType } from '../../types';
+import { BuildState } from '../../types';
 
 const BuildGrid = ({ activeGod }: any) => {
-  let build,
-    name,
-    thumbnail = undefined;
+  let build, name, thumbnail;
 
   if (activeGod) {
     build = activeGod.build;
     name = activeGod.name;
     thumbnail = activeGod.thumbnail;
+  } else {
+    build = allGods[0].build;
+    name = allGods[0].name;
+    thumbnail = allGods[0].thumbnail;
   }
 
   //Search Bar
@@ -27,16 +30,28 @@ const BuildGrid = ({ activeGod }: any) => {
     const results = allItems.filter((item: any) =>
       item.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
-
     setSearchResults(results);
   }, [searchTerm]);
+
+  //State for sections of build
+  const initialBuildState: BuildState = {
+    buildSection: 0,
+  };
+
+  const [state, setState] = useState(initialBuildState);
+
+  const setBuildState = (buildState: number) => {
+    setState({
+      buildSection: buildState,
+    });
+  };
 
   return (
     <>
       <div className="buildWrapper">
         <div className="buildHeading">
           <div className="buildGodProfile">
-            <img src={thumbnail} alt="" className="buildGodIcon" />
+            <img src={thumbnail} alt="God Icon" className="buildGodIcon" />
             <div className="buildGodName">{name}</div>
           </div>
           <div className="buildLowerHeading">
@@ -47,7 +62,7 @@ const BuildGrid = ({ activeGod }: any) => {
               onChange={handleSearchItems}
               value={searchTerm}
             />
-            <button className="buildSaveButton">SAVE</button>
+            <button className="buildDisplayButton">DISPLAY</button>
           </div>
         </div>
         <div className="buildGrid">

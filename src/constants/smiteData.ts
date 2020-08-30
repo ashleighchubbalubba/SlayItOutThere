@@ -799,6 +799,7 @@ export const allGods = [
     id: 1,
     name: 'Achilles',
     thumbnail: '/icons/achilles.png',
+    build: undefined,
   },
   {
     id: 2,
