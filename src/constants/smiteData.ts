@@ -984,6 +984,7 @@ export const allGods = [
     id: 34,
     name: 'Cupid',
     thumbnail: '/icons/cupid.png',
+    build: undefined,
   },
   {
     id: 35,

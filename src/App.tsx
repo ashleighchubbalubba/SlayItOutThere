@@ -75,7 +75,11 @@ const App = () => {
             <GridCol desktop={1}></GridCol>
             {state.isDisplay && (
               <GridCol desktop={7}>
-                <ItemsGrid activeGod={getSelectedGod(state.selectedGod)} />
+                <ItemsGrid
+                  activeGod={getSelectedGod(state.selectedGod)}
+                  isSavedGods={state.isSavedGods}
+                  setIsDisplay={setIsDisplay}
+                />
               </GridCol>
             )}
             {!state.isDisplay && (
@@ -83,7 +87,6 @@ const App = () => {
                 <BuildGrid
                   activeGod={getSelectedGod(state.selectedGod)}
                   isSavedGods={state.isSavedGods}
-                  isDisplay={state.isDisplay}
                   setIsDisplay={setIsDisplay}
                 />
               </GridCol>

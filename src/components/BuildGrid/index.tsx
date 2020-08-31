@@ -5,7 +5,7 @@ import Item from '../Item';
 import { Item as ItemType } from '../../types';
 import BuildSections from '../BuildSections';
 
-const BuildGrid = ({ activeGod, isSavedGods, isDisplay, setIsDisplay }: any) => {
+const BuildGrid = ({ activeGod, isSavedGods, setIsDisplay }: any) => {
   let build, name, thumbnail;
 
   if (activeGod) {
