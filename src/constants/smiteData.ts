@@ -756,24 +756,10 @@ export const allItems = [
 
 export const savedGods = [
   {
-    id: 31,
-    name: 'Chronos',
-    thumbnail: '/icons/chronos.png',
-  },
-  {
-    id: 32,
-    name: 'Cthulhu',
-    thumbnail: '/icons/cthulhu.png',
-  },
-  {
-    id: 33,
-    name: 'Cuchulainn',
-    thumbnail: '/icons/cuchulainn.png',
-  },
-  {
     id: 34,
     name: 'Cupid',
     thumbnail: '/icons/cupid.png',
+    build: undefined,
   },
   {
     id: 35,

@@ -28,6 +28,7 @@ export interface GlobalState {
   isSavedGods: Boolean;
   selectedGod: number;
   savedGodsList: Array<God>;
+  isDisplay: Boolean;
 }
 
 export interface BuildState {

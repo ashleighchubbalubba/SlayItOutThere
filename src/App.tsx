@@ -14,6 +14,7 @@ const App = () => {
     isSavedGods: true,
     selectedGod: 0,
     savedGodsList: savedGods as Array<GodType>,
+    isDisplay: false,
   };
 
   //what stores and intializes the default state
@@ -25,6 +26,7 @@ const App = () => {
       isSavedGods: isSavedGods,
       selectedGod: state.selectedGod,
       savedGodsList: state.savedGodsList,
+      isDisplay: state.isDisplay,
     });
   };
 
@@ -35,6 +37,17 @@ const App = () => {
       selectedGod: id,
       isSavedGods: state.isSavedGods,
       savedGodsList: state.savedGodsList,
+      isDisplay: state.isDisplay,
+    });
+  };
+
+  //sets Saved God State
+  const setIsDisplay = (isDisplay: Boolean) => {
+    setState({
+      isSavedGods: state.isSavedGods,
+      selectedGod: state.selectedGod,
+      savedGodsList: state.savedGodsList,
+      isDisplay: isDisplay,
     });
   };
 
@@ -59,20 +72,23 @@ const App = () => {
         </GridCol>
         <GridCol desktop={9} className="rightHalf">
           <GridRow desktop={9} className="miniGrid">
-            {state.isSavedGods && <GridCol desktop={2}></GridCol>}
-            {state.isSavedGods && (
-              <GridCol desktop={5}>
+            <GridCol desktop={1}></GridCol>
+            {state.isDisplay && (
+              <GridCol desktop={7}>
                 <ItemsGrid activeGod={getSelectedGod(state.selectedGod)} />
               </GridCol>
             )}
-            {state.isSavedGods && <GridCol desktop={2}></GridCol>}
-            {!state.isSavedGods && <GridCol desktop={1}></GridCol>}
-            {!state.isSavedGods && (
+            {!state.isDisplay && (
               <GridCol desktop={7}>
-                <BuildGrid activeGod={getSelectedGod(state.selectedGod)} />
+                <BuildGrid
+                  activeGod={getSelectedGod(state.selectedGod)}
+                  isSavedGods={state.isSavedGods}
+                  isDisplay={state.isDisplay}
+                  setIsDisplay={setIsDisplay}
+                />
               </GridCol>
             )}
-            {!state.isSavedGods && <GridCol desktop={1}></GridCol>}
+            <GridCol desktop={1}></GridCol>
           </GridRow>
         </GridCol>
       </GridRow>
