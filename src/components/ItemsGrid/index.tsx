@@ -57,20 +57,51 @@ const ItemsGrid = ({ activeGod, isSavedGods, setIsDisplay }: any) => {
             build.map((item: ItemType) => (
               <Item id={item.id} name={item.name} thumbnail={item.thumbnail} />
             ))} */}
-            <div className="itemsGridLeft"></div>
-              <div className="Starter">
-                <div className="starterTitle">Starter</div>
-                <div className="starterFlex"></div>
+          <div className="itemsGridLeft">
+            <div className="buildName">SUPPORT BUILD</div>
+            <div className="itemSection">
+              <div className="itemSectionTitle">Starter</div>
+              <div className="itemSectionFlex">
+                <div className="itemEmptyBox"></div>
+                <div className="itemEmptyBox"></div>
+                <div className="itemEmptyBox"></div>
+                <div className="itemEmptyBox"></div>
+                <div className="itemEmptyBox"></div>
+                <div className="itemEmptyBox"></div>
               </div>
-              <div className="Core">
-                <div className="coreTitle">Core</div>
-                <div className="coreFlex"></div>
+            </div>
+            <div className="itemSection">
+              <div className="itemSectionTitle">Core</div>
+              <div className="itemSectionFlex">
+                <div className="itemEmptyBox"></div>
+                <div className="itemEmptyBox"></div>
+                <div className="itemEmptyBox"></div>
+                <div className="itemEmptyBox"></div>
+                <div className="itemEmptyBox"></div>
+                <div className="itemEmptyBox"></div>
               </div>
-              <div className="Situational">
-                <div className="situationalTitle">Situational</div>
-                <div className="situationalFlex"></div>
+            </div>
+            <div className="itemSection">
+              <div className="situationalHeadingWrapper">
+                <div className="itemSectionTitle">Situational</div>
               </div>
-            <div className="itemsGridRight"></div>
+              <div className="itemSectionFlex">
+                <div className="itemEmptyBox"></div>
+                <div className="itemEmptyBox"></div>
+                <div className="itemEmptyBox"></div>
+                <div className="itemEmptyBox"></div>
+                <div className="itemEmptyBox"></div>
+                <div className="itemEmptyBox"></div>
+              </div>
+            </div>
+          </div>
+          <div className="itemsGridRight">
+            <div className="itemSectionTitle">Relics</div>
+            <div className="relicSectionFlex">
+              <div className="relicEmptyBox"></div>
+              <div className="relicEmptyBox"></div>
+            </div>
+          </div>
         </div>
       </div>
     </>

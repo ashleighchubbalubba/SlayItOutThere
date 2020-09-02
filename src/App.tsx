@@ -14,7 +14,7 @@ const App = () => {
     isSavedGods: true,
     selectedGod: 0,
     savedGodsList: savedGods as Array<GodType>,
-    isDisplay: false,
+    isDisplay: true,
   };
 
   //what stores and intializes the default state

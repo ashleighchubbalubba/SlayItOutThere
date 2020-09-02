@@ -1,14 +1,58 @@
-.itemsListTitle {
-    font-family: Penumbra HalfSerif Std;
-    font-size: 40px;
-    color: #FAF9F7;
-    text-shadow: 0px 0px 29px #85784A;
-    padding-bottom: 25px;
+.itemsGrid {
+  display: flex;
+  flex-direction: row;
 }
 
-.itemsGrid {
-    display: grid;
-    grid-template-columns: 180px 180px 180px;
-    grid-template-rows: auto auto;
+.buildName {
+  font-family: Penumbra HalfSerif Std;
+  font-size: 30px;
+  color: #faf9f7;
+  text-align: left;
+  margin-bottom: 7px;
+}
+
+.itemSection {
+  margin-bottom: 13px;
+  margin-right: none;
+}
+
+.itemSectionTitle {
+  font-family: Penumbra;
+  color: #d3cec4;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 7px;
+}
+
+.itemSectionFlex {
+  display: flex;
+  flex-direction: row;
+}
+
+.itemEmptyBox {
+  height: 85px;
+  width: 85px;
+  background-color: #423d33;
+  margin-right: 15px;
+}
+
+.itemsGridRight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.relicSectionFlex {
+  display: flex;
+  flex-direction: column;
+}
+
+.relicEmptyBox {
+  height: 85px;
+  width: 85px;
+  background-color: #423d33;
+  margin-bottom: 15px;
 }
