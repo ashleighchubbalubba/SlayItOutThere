@@ -33,7 +33,7 @@ const ItemsGrid = ({ activeGod, isSavedGods, setIsDisplay }: any) => {
   return (
     <>
       <div className="itemsWrapper">
-        <div className="buildHeading">
+        <div className="itemsHeading">
           <div className="buildGodProfile">
             <img src={thumbnail} alt="God Icon" className="buildGodIcon" />
             <div className="buildGodName">{name}</div>
@@ -51,55 +51,57 @@ const ItemsGrid = ({ activeGod, isSavedGods, setIsDisplay }: any) => {
             </button>
           </div>
         </div>
-        <div className="itemsGrid">
-          {/* do it only if the selectedGod has a build */}
-          {/* {build &&
+        <div className="listOfItemsGrids">
+          <div className="itemsGrid">
+            {/* do it only if the selectedGod has a build */}
+            {/* {build &&
             build.map((item: ItemType) => (
               <Item id={item.id} name={item.name} thumbnail={item.thumbnail} />
             ))} */}
-          <div className="itemsGridLeft">
-            <div className="buildName">SUPPORT BUILD</div>
-            <div className="itemSection">
-              <div className="itemSectionTitle">Starter</div>
-              <div className="itemSectionFlex">
-                <div className="itemEmptyBox"></div>
-                <div className="itemEmptyBox"></div>
-                <div className="itemEmptyBox"></div>
-                <div className="itemEmptyBox"></div>
-                <div className="itemEmptyBox"></div>
-                <div className="itemEmptyBox"></div>
+            <div className="itemsGridLeft">
+              <div className="buildName">SUPPORT BUILD</div>
+              <div className="itemSection">
+                <div className="itemSectionTitle">Starter</div>
+                <div className="itemSectionFlex">
+                  <div className="itemEmptyBox"></div>
+                  <div className="itemEmptyBox"></div>
+                  <div className="itemEmptyBox"></div>
+                  <div className="itemEmptyBox"></div>
+                  <div className="itemEmptyBox"></div>
+                  <div className="itemEmptyBox"></div>
+                </div>
+              </div>
+              <div className="itemSection">
+                <div className="itemSectionTitle">Core</div>
+                <div className="itemSectionFlex">
+                  <div className="itemEmptyBox"></div>
+                  <div className="itemEmptyBox"></div>
+                  <div className="itemEmptyBox"></div>
+                  <div className="itemEmptyBox"></div>
+                  <div className="itemEmptyBox"></div>
+                  <div className="itemEmptyBox"></div>
+                </div>
+              </div>
+              <div className="itemSection">
+                <div className="situationalHeadingWrapper">
+                  <div className="itemSectionTitle">Situational</div>
+                </div>
+                <div className="itemSectionFlex">
+                  <div className="itemEmptyBox"></div>
+                  <div className="itemEmptyBox"></div>
+                  <div className="itemEmptyBox"></div>
+                  <div className="itemEmptyBox"></div>
+                  <div className="itemEmptyBox"></div>
+                  <div className="itemEmptyBox"></div>
+                </div>
               </div>
             </div>
-            <div className="itemSection">
-              <div className="itemSectionTitle">Core</div>
-              <div className="itemSectionFlex">
-                <div className="itemEmptyBox"></div>
-                <div className="itemEmptyBox"></div>
-                <div className="itemEmptyBox"></div>
-                <div className="itemEmptyBox"></div>
-                <div className="itemEmptyBox"></div>
-                <div className="itemEmptyBox"></div>
+            <div className="itemsGridRight">
+              <div className="itemSectionTitle">Relics</div>
+              <div className="relicSectionFlex">
+                <div className="relicEmptyBox"></div>
+                <div className="relicEmptyBox"></div>
               </div>
-            </div>
-            <div className="itemSection">
-              <div className="situationalHeadingWrapper">
-                <div className="itemSectionTitle">Situational</div>
-              </div>
-              <div className="itemSectionFlex">
-                <div className="itemEmptyBox"></div>
-                <div className="itemEmptyBox"></div>
-                <div className="itemEmptyBox"></div>
-                <div className="itemEmptyBox"></div>
-                <div className="itemEmptyBox"></div>
-                <div className="itemEmptyBox"></div>
-              </div>
-            </div>
-          </div>
-          <div className="itemsGridRight">
-            <div className="itemSectionTitle">Relics</div>
-            <div className="relicSectionFlex">
-              <div className="relicEmptyBox"></div>
-              <div className="relicEmptyBox"></div>
             </div>
           </div>
         </div>
