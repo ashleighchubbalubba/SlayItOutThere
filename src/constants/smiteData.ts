@@ -1,12 +1,10 @@
-export const sampleCupidBuild = [
-  {
-    id: 200,
-    name: 'Sovereignty',
-    starter: ['123', '123'],
-    thumbnail: '/items/sovereignty.jpg'
-  },
-];
-
+export const sampleCupidBuild = {
+  id: 200,
+  starter: [230, 240],
+  core: [201, 202, 203, 204],
+  situational: [205, 206, 207, 208, 209],
+  relics: [210, 211],
+};
 
 /**
  * <GodBuildPage>
@@ -14,38 +12,37 @@ export const sampleCupidBuild = [
  *    - <Item>
  *    - <Item>
  *    - <Item>
- * 
+ *
  *  build = {
  *  id: 1,
  *  name: 'build',
  *  starter: ['123', '124']
  *  }
- *  
- *  // reads json object 
+ *
+ *  // reads json object
  *  const itemService = new ItemService();
- * 
+ *
  *  const starterItems = [];
- * 
+ *
  *  // shape of item
  *  item = {
  *    id: 1,
  *    name: "name",
  *    thumbnail: "url"
  *  }
- * 
+ *
  *  build.starter.forEach(itemId => {
  *    starterItems.push(
  *      let item = itemService.getItem(itemId);
- *      
+ *
  *      starterItems.push(
  *      <SmiteItem id={item.id} name={item.name} thumbnail={item.thumbnail}/>
  *      )
  *    )
  * })
- *  
- * 
+ *
+ *
  */
-
 
 export const allItems = [
   {
@@ -620,12 +617,12 @@ export const allItems = [
   },
   {
     id: 314,
-    name: 'Baba\'s Brew',
+    name: "Baba's Brew",
     thumbnail: '/consumables/BabasBrew.png',
   },
   {
     id: 315,
-    name: 'Baron\'s Brew',
+    name: "Baron's Brew",
     thumbnail: '/consumables/BaronsBrew.png',
   },
   {
@@ -1388,5 +1385,3 @@ export const allGods = [
     thumbnail: '/icons/zhongkui.png',
   },
 ];
-
-

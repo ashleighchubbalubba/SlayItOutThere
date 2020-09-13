@@ -1,45 +1,39 @@
 import React from 'react';
-import Item from '../../GlobalComponents/ItemTile';
+import ItemTile from '../../GlobalComponents/ItemTile';
+import ItemService from '../../../itemService';
 import { Item as ItemType } from '../../../types';
+import { sampleCupidBuild } from '../../../constants/smiteData';
 import './ItemsGrid.scss';
 
 const ItemsGrid = ({ build }: any) => {
+  const itemService = new ItemService();
+
+  let item = undefined;
+
   return (
     <>
       <div className="listOfItemsGrids">
         <div className="itemsGrid">
-          {/* do it only if the selectedGod has a build */}
-          {/* {build &&
-            build.map((item: ItemType) => (
-              <Item id={item.id} name={item.name} thumbnail={item.thumbnail} />
-            ))} */}
           <div className="itemsGridLeft">
             <div className="buildName">SUPPORT BUILD</div>
+
             <div className="itemSection">
               <div className="itemSectionTitle">Starter</div>
               <div className="itemSectionFlex">
-                {/* {build.starter.map(item => {
-                    return (
-                      <SmiteItem id={item.id} name={item.name} thumbnail={item.thumbnail}/>                           
-                    )
-                  })} */}
-                <div className="itemEmptyBox"></div>
-                <div className="itemEmptyBox"></div>
-                <div className="itemEmptyBox"></div>
-                <div className="itemEmptyBox"></div>
-                <div className="itemEmptyBox"></div>
-                <div className="itemEmptyBox"></div>
+                {sampleCupidBuild.starter.map((itemID: number) => {
+                  item = itemService.getItem(itemID);
+                  return <ItemTile id={item.id} name={item.name} thumbnail={item.thumbnail} />;
+                })}
               </div>
             </div>
+
             <div className="itemSection">
               <div className="itemSectionTitle">Core</div>
               <div className="itemSectionFlex">
-                <div className="itemEmptyBox"></div>
-                <div className="itemEmptyBox"></div>
-                <div className="itemEmptyBox"></div>
-                <div className="itemEmptyBox"></div>
-                <div className="itemEmptyBox"></div>
-                <div className="itemEmptyBox"></div>
+                {sampleCupidBuild.core.map((itemID: number) => {
+                  item = itemService.getItem(itemID);
+                  return <ItemTile id={item.id} name={item.name} thumbnail={item.thumbnail} />;
+                })}
               </div>
             </div>
             <div className="itemSection">
@@ -47,20 +41,20 @@ const ItemsGrid = ({ build }: any) => {
                 <div className="itemSectionTitle">Situational</div>
               </div>
               <div className="itemSectionFlex">
-                <div className="itemEmptyBox"></div>
-                <div className="itemEmptyBox"></div>
-                <div className="itemEmptyBox"></div>
-                <div className="itemEmptyBox"></div>
-                <div className="itemEmptyBox"></div>
-                <div className="itemEmptyBox"></div>
+                {sampleCupidBuild.situational.map((itemID: number) => {
+                  item = itemService.getItem(itemID);
+                  return <ItemTile id={item.id} name={item.name} thumbnail={item.thumbnail} />;
+                })}
               </div>
             </div>
           </div>
           <div className="itemsGridRight">
             <div className="itemSectionTitle">Relics</div>
             <div className="relicSectionFlex">
-              <div className="relicEmptyBox"></div>
-              <div className="relicEmptyBox"></div>
+              {sampleCupidBuild.relics.map((itemID: number) => {
+                item = itemService.getItem(itemID);
+                return <ItemTile id={item.id} name={item.name} thumbnail={item.thumbnail} />;
+              })}
             </div>
           </div>
         </div>

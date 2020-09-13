@@ -13,15 +13,15 @@ export interface Item {
 
 export interface Build {
   id: number;
-  starter: Array<Item>;
-  core: Array<Item>;
+  starter: Array<number>;
+  core: Array<number>;
   situational: Array<SitTabs>;
   relics: Array<Item>;
 }
 
 export interface SitTabs {
   name: String;
-  items: Array<Item>;
+  items: Array<number>;
 }
 
 export interface GlobalState {
