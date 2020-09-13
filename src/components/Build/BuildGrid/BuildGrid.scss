@@ -1,0 +1,13 @@
+.buildGridWrapper {
+  display: grid;
+  grid-template-columns: 140px 140px 140px 140px 140px;
+  grid-template-rows: 138px 138px 138px;
+  height: 55vh;
+  overflow-y: scroll;
+  margin-top: 2vh;
+  width: 100%;
+  background-color: #1b1813;
+  justify-content: center;
+  padding-top: 20px;
+  border-radius: 4px;
+}

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import GodsList from './components/GodsList';
-import ItemsGrid from './components/ItemsGrid';
-import BuildGrid from './components/BuildGrid';
+import GodsList from './components/GodSideBar/GodsList';
+import ItemsPage from './components/Items/ItemsPage';
+import BuildPage from './components/Build/BuildPage';
 import { savedGods, allGods } from './constants/smiteData';
 import { God as GodType } from './types/';
-import { GridRow, GridCol } from './components/Grid';
+import { GridRow, GridCol } from './components/GlobalComponents/Grid';
 import { GlobalState } from './types';
 import './App.css';
 
@@ -75,18 +75,20 @@ const App = () => {
             <GridCol desktop={1}></GridCol>
             {state.isDisplay && (
               <GridCol desktop={7}>
-                <ItemsGrid
+                <ItemsPage
                   activeGod={getSelectedGod(state.selectedGod)}
                   isSavedGods={state.isSavedGods}
+                  isDisplay={state.isDisplay}
                   setIsDisplay={setIsDisplay}
                 />
               </GridCol>
             )}
             {!state.isDisplay && (
               <GridCol desktop={7}>
-                <BuildGrid
+                <BuildPage
                   activeGod={getSelectedGod(state.selectedGod)}
                   isSavedGods={state.isSavedGods}
+                  isDisplay={state.isDisplay}
                   setIsDisplay={setIsDisplay}
                 />
               </GridCol>

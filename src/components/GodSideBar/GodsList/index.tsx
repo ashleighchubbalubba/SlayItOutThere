@@ -1,8 +1,8 @@
 import React from 'react';
 import God from '../God';
 import './GodsList.scss';
-import { God as GodType } from '../../types';
-import { allGods } from '../../constants/smiteData';
+import { God as GodType } from '../../../types';
+import { allGods } from '../../../constants/smiteData';
 
 const GodsList = ({
   isSavedGods,

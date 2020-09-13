@@ -1,14 +1,14 @@
-.buildItemsSection {
+.buildSectionsWrapper {
   margin-top: 10px;
 }
 
-.sectionBuildTab {
+.buildSectionsTabs {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
 }
 
-.sectionBuildButton {
+.buildSectionsButton {
   height: 26px;
   background-color: #27241d;
   border-radius: 3px;
@@ -21,18 +21,18 @@
   margin-right: 10px;
 }
 
-.sectionBuildButton:hover {
+.buildSectionsButton:hover {
   color: #d3cec4;
   cursor: pointer;
   background-color: #504a40;
 }
 
-.selectedSection {
+.selectedBuildSection {
   color: #d3cec4;
   background-color: #504a40;
 }
 
-.buildItems {
+.buildSectionsItemsWrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -41,14 +41,14 @@
   align-items: center;
 }
 
-.buildSingleItem {
-  width: 119px;
-  height: 119px;
-  background-color: #423d33;
-  //   cursor: pointer;
-}
+// .buildSingleItem {
+//   width: 119px;
+//   height: 119px;
+//   background-color: #423d33;
+//   //   cursor: pointer;
+// }
 
-.buildRelicItem {
-  background-color: #27241d;
-  //   cursor: default;
-}
+// .buildRelicItem {
+//   background-color: #27241d;
+//   //   cursor: default;
+// }

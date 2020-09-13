@@ -1,35 +1,51 @@
-export const sampleBuild = [
+export const sampleCupidBuild = [
   {
     id: 200,
     name: 'Sovereignty',
-    thumbnail: '/items/sovereignty.jpg',
-  },
-  {
-    id: 201,
-    name: 'Mystical Mail',
-    thumbnail: '/items/mystical-mail.jpg',
-  },
-  {
-    id: 202,
-    name: 'Midgardian Mail',
-    thumbnail: '/items/midgardian-mail.jpg',
-  },
-  {
-    id: 203,
-    name: "Emperor's Armor",
-    thumbnail: '/items/emperors-armor.jpg',
-  },
-  {
-    id: 204,
-    name: 'The Executioner',
-    thumbnail: '/items/the-executioner.jpg',
-  },
-  {
-    id: 205,
-    name: "Qin's Sais",
-    thumbnail: '/items/qins-sais.jpg',
+    starter: ['123', '123'],
+    thumbnail: '/items/sovereignty.jpg'
   },
 ];
+
+
+/**
+ * <GodBuildPage>
+ *   - <Starter>
+ *    - <Item>
+ *    - <Item>
+ *    - <Item>
+ * 
+ *  build = {
+ *  id: 1,
+ *  name: 'build',
+ *  starter: ['123', '124']
+ *  }
+ *  
+ *  // reads json object 
+ *  const itemService = new ItemService();
+ * 
+ *  const starterItems = [];
+ * 
+ *  // shape of item
+ *  item = {
+ *    id: 1,
+ *    name: "name",
+ *    thumbnail: "url"
+ *  }
+ * 
+ *  build.starter.forEach(itemId => {
+ *    starterItems.push(
+ *      let item = itemService.getItem(itemId);
+ *      
+ *      starterItems.push(
+ *      <SmiteItem id={item.id} name={item.name} thumbnail={item.thumbnail}/>
+ *      )
+ *    )
+ * })
+ *  
+ * 
+ */
+
 
 export const allItems = [
   {

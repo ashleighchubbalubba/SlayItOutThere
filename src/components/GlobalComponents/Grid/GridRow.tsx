@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { MOBILE_ONLY_MEDIA_QUERY, TABLET_MEDIA_QUERY, DESKTOP_MEDIA_QUERY } from '../../styles';
+import { MOBILE_ONLY_MEDIA_QUERY, TABLET_MEDIA_QUERY, DESKTOP_MEDIA_QUERY } from '../../../styles';
 
 type mobileValues = 1 | 2 | 3 | 4;
 type tabletDesktopValues = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
