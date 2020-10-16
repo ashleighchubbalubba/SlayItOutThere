@@ -6,6 +6,14 @@ export const sampleCupidBuild = {
   relics: [210, 211],
 };
 
+export const itemGridTile = {
+  id: 200,
+  starter: [230, 240],
+  core: [201, 202, 203, 204],
+  situational: [205, 206, 207, 208, 209],
+  relics: [210, 211],
+};
+
 /**
  * <GodBuildPage>
  *   - <Starter>

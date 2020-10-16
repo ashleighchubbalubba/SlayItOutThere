@@ -2,10 +2,10 @@ import React from 'react';
 import './ItemTile.scss';
 import { Item as ItemType } from '../../../types';
 
-const ItemTile = ({ name, thumbnail }: ItemType) => {
+const ItemTile = ({ name, thumbnail, css }: any) => {
   return (
     <>
-      <div>
+      <div className = "itemTileWrapper">
         <div className="itemTileOverlay">
           <img src={thumbnail} alt="Item Thumbnail" className="itemTileThumbnail" />
         </div>
