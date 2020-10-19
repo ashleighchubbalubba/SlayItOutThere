@@ -1,8 +1,17 @@
 import React, { useState } from 'react';
 import { BuildState } from '../../../types';
+import { Item as ItemType } from '../../../types';
+import ItemTile from '../../GlobalComponents/ItemTile';
+import ItemService from '../../../itemService';
+
+import { sampleCupidBuild } from '../../../constants/smiteData';
+
 import './BuildSections.scss';
 
 const BuildSections = ({ build }: any) => {
+
+  const itemService = new ItemService();
+  let item = undefined;
 
   const initialBuildState: BuildState = {
     buildSection: 0,
@@ -46,9 +55,16 @@ const BuildSections = ({ build }: any) => {
           </button>
         </div>
         <div className="buildSectionsItemsWrapper">
-            {/* {build &&build.map((item: ItemType) => <Item id={item.id} name={item.name} thumbnail={item.thumbnail} />)} */}
-            {/* {sampleBuild && sampleBuild.map((item: ItemType) => <Item id={item.id} name={item.name} thumbnail={item.thumbnail} />)} */}
-            {/* <div className="buildSingleItem"></div>
+          {/* {build &&
+            build.map((item: ItemType) => (
+              <ItemTile id={item.id} name={item.name} thumbnail={item.thumbnail} />
+            ))} */}
+          {sampleCupidBuild.situational.map((itemID: number) => {
+            item = itemService.getItem(itemID);
+            return <ItemTile name={item.name} thumbnail={item.thumbnail}/>;
+          })}
+
+          {/* <div className="buildSingleItem"></div>
             <div className="buildSingleItem"></div>
             <div className={`${state.buildSection === 3 && 'buildRelicItem'} buildSingleItem`}></div>
             <div className={`${state.buildSection === 3 && 'buildRelicItem'} buildSingleItem`}></div>

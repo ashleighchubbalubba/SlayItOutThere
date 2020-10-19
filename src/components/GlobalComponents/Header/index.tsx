@@ -7,7 +7,6 @@ const Header = ({
   thumbnail,
   isDisplay,
   setIsDisplay,
-  buildGridItems,
   setBuildGridItems,
 }: any) => {
   const handleIsDisplay = (bool: any) => {

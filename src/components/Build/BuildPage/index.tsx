@@ -48,7 +48,6 @@ const BuildPage = ({ activeGod, isSavedGods, isDisplay, setIsDisplay }: any) => 
         thumbnail={thumbnail}
         isDisplay={isDisplay}
         setIsDisplay={setIsDisplay}
-        buildGridItems={state.buildGridItems}
         setBuildGridItems={setBuildGridItems}
       />
       <BuildGrid buildGridItems={state.buildGridItems} />
