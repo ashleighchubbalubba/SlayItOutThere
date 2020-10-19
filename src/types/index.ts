@@ -31,6 +31,10 @@ export interface GlobalState {
   isDisplay: Boolean;
 }
 
+export interface BuildPageState {
+  buildGridItems: Array<Item>;
+}
+
 export interface BuildState {
   buildSection: number;
 }

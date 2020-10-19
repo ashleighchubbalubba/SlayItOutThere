@@ -3,9 +3,8 @@ import GodsList from './components/GodSideBar/GodsList';
 import ItemsPage from './components/Items/ItemsPage';
 import BuildPage from './components/Build/BuildPage';
 import { savedGods, allGods } from './constants/smiteData';
-import { God as GodType } from './types/';
+import { God as GodType, GlobalState } from './types/';
 import { GridRow, GridCol } from './components/GlobalComponents/Grid';
-import { GlobalState } from './types';
 import './App.css';
 
 const App = () => {
@@ -14,7 +13,7 @@ const App = () => {
     isSavedGods: true,
     selectedGod: 0,
     savedGodsList: savedGods as Array<GodType>,
-    isDisplay: true,
+    isDisplay: false,
   };
 
   //what stores and intializes the default state

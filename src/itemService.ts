@@ -7,7 +7,6 @@ class ItemService {
     var returnedItem = allItems[0];
     allItems.forEach((item: ItemType) => {
       if (item.id === id) {
-        console.log('hi');
         returnedItem = item;
       }
     });

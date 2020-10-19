@@ -1,25 +1,34 @@
 import React from 'react';
+import { allItems } from '../../../constants/smiteData';
 import './Header.scss';
 
-const Header = ({ name, thumbnail, isDisplay, setIsDisplay }: any) => {
+const Header = ({
+  name,
+  thumbnail,
+  isDisplay,
+  setIsDisplay,
+  buildGridItems,
+  setBuildGridItems,
+}: any) => {
   const handleIsDisplay = (bool: any) => {
     setIsDisplay(bool);
   };
 
-  // //Search Bar
-  // const [searchTerm, setSearchTerm] = React.useState('');
+  //Search Bar
+  const [searchTerm, setSearchTerm] = React.useState('');
   // const [searchResults, setSearchResults] = React.useState(allItems);
 
-  // const handleSearchItems = (event: React.FormEvent<HTMLInputElement>): void => {
-  //   setSearchTerm(event.currentTarget.value);
-  // };
+  const handleSearchItems = (event: React.FormEvent<HTMLInputElement>): void => {
+    setSearchTerm(event.currentTarget.value);
+  };
 
-  // React.useEffect(() => {
-  //   const results = allItems.filter((item: any) =>
-  //     item.name.toLowerCase().includes(searchTerm.toLowerCase())
-  //   );
-  //   setSearchResults(results);
-  // }, [searchTerm]);
+  React.useEffect(() => {
+    const results = allItems.filter((item: any) =>
+      item.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    if(setBuildGridItems !== null)
+      setBuildGridItems(results);
+  }, [searchTerm]);
 
   let button;
 
@@ -49,8 +58,8 @@ const Header = ({ name, thumbnail, isDisplay, setIsDisplay }: any) => {
             type="text"
             className="headingSearchBar"
             placeholder="Search Item..."
-            // onChange={handleSearchItems}
-            // value={searchTerm}
+            onChange={handleSearchItems}
+            value={searchTerm}
           />
           {button}
         </div>

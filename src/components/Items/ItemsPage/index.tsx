@@ -27,7 +27,7 @@ const ItemsPage = ({ activeGod, isSavedGods, isDisplay, setIsDisplay }: any) => 
 
   return (
     <div className="itemsPageWrapper">
-      <Header name={name} thumbnail={thumbnail} isDisplay={isDisplay} setIsDisplay={setIsDisplay} />
+      <Header name={name} thumbnail={thumbnail} isDisplay={isDisplay} setIsDisplay={setIsDisplay} setBuildGridItems={null}/>
       <ItemsGrid build={build} />
     </div>
   );
