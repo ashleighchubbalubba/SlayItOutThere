@@ -59,7 +59,20 @@ const BuildSections = ({ build }: any) => {
             build.map((item: ItemType) => (
               <ItemTile id={item.id} name={item.name} thumbnail={item.thumbnail} />
             ))} */}
-          {sampleCupidBuild.situational.map((itemID: number) => {
+
+          {state.buildSection === 0 && sampleCupidBuild.starter.map((itemID: number) => {
+            item = itemService.getItem(itemID);
+            return <ItemTile name={item.name} thumbnail={item.thumbnail}/>;
+          })}
+          {state.buildSection === 1 && sampleCupidBuild.core.map((itemID: number) => {
+            item = itemService.getItem(itemID);
+            return <ItemTile name={item.name} thumbnail={item.thumbnail}/>;
+          })}
+          {state.buildSection === 2 && sampleCupidBuild.situational.map((itemID: number) => {
+            item = itemService.getItem(itemID);
+            return <ItemTile name={item.name} thumbnail={item.thumbnail}/>;
+          })}
+          {state.buildSection === 3 && sampleCupidBuild.relics.map((itemID: number) => {
             item = itemService.getItem(itemID);
             return <ItemTile name={item.name} thumbnail={item.thumbnail}/>;
           })}
