@@ -1,8 +1,8 @@
 export const sampleCupidBuild = {
   id: 200,
-  starter: [230, 240],
-  core: [201, 202, 203, 204],
-  situational: [205, 206, 207, 208, 209, 201, 215],
+  starter: [230, 240, 203, 219, 220, 234],
+  core: [201, 202, 203, 204, 205, 241],
+  situational: [205, 206, 207, 208, 209, 201],
   relics: [210, 211],
 };
 

@@ -10,6 +10,7 @@ const BuildPage = ({ activeGod, isSavedGods, isDisplay, setIsDisplay }: any) => 
   //Keep track on what items to display in grid
   const initialBuildState: BuildPageState = {
     buildGridItems: allItems as Array<ItemType>,
+    // selectedItem: ItemType,
   };
 
   //Initialize and store default state

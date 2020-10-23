@@ -56,7 +56,7 @@ const Header = ({
           <input
             type="text"
             className="headingSearchBar"
-            placeholder="Search Item..."
+            placeholder= {(!isDisplay && "Search Item...") || (isDisplay && "Search Build...")}
             onChange={handleSearchItems}
             value={searchTerm}
           />
