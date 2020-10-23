@@ -6,51 +6,68 @@ export const sampleCupidBuild = {
   relics: [210, 211],
 };
 
-export const itemGridTile = {
-  id: 200,
-  starter: [230, 240],
-  core: [201, 202, 203, 204],
-  situational: [205, 206, 207, 208, 209],
-  relics: [210, 211],
-};
+export const savedGods = {
+  savedGodsList: [34, 35, 36, 37, 38]
+}
 
-/**
- * <GodBuildPage>
- *   - <Starter>
- *    - <Item>
- *    - <Item>
- *    - <Item>
- *
- *  build = {
- *  id: 1,
- *  name: 'build',
- *  starter: ['123', '124']
- *  }
- *
- *  // reads json object
- *  const itemService = new ItemService();
- *
- *  const starterItems = [];
- *
- *  // shape of item
- *  item = {
- *    id: 1,
- *    name: "name",
- *    thumbnail: "url"
- *  }
- *
- *  build.starter.forEach(itemId => {
- *    starterItems.push(
- *      let item = itemService.getItem(itemId);
- *
- *      starterItems.push(
- *      <SmiteItem id={item.id} name={item.name} thumbnail={item.thumbnail}/>
- *      )
- *    )
- * })
- *
- *
- */
+// export const savedGods = [
+//   {
+//     id: 34,
+//     name: 'Cupid',
+//     thumbnail: '/icons/cupid.png',
+//     build: undefined,
+//   },
+//   {
+//     id: 35,
+//     name: 'Daji',
+//     thumbnail: '/icons/daji.png',
+//   },
+//   {
+//     id: 36,
+//     name: 'Discordia',
+//     thumbnail: '/icons/discordia.png',
+//   },
+//   {
+//     id: 37,
+//     name: 'Erlang Shen',
+//     thumbnail: '/icons/erlangshen.png',
+//   },
+//   {
+//     id: 38,
+//     name: 'Fafnir',
+//     thumbnail: '/icons/fafnir.png',
+//   },
+//   {
+//     id: 39,
+//     name: 'Fenrir',
+//     thumbnail: '/icons/fenrir.png',
+//   },
+//   {
+//     id: 40,
+//     name: 'Freya',
+//     thumbnail: '/icons/freya.png',
+//   },
+//   {
+//     id: 41,
+//     name: 'Ganesha',
+//     thumbnail: '/icons/ganesha.png',
+//   },
+//   {
+//     id: 42,
+//     name: 'Geb',
+//     thumbnail: '/icons/geb.png',
+//   },
+//   {
+//     id: 43,
+//     name: 'Guan Yu',
+//     thumbnail: '/icons/guanyu.png',
+//   },
+//   {
+//     id: 44,
+//     name: 'Hachiman',
+//     thumbnail: '/icons/hachiman.png',
+//   },
+// ];
 
 export const allItems = [
   {
@@ -775,65 +792,6 @@ export const allItems = [
   },
 ];
 
-export const savedGods = [
-  {
-    id: 34,
-    name: 'Cupid',
-    thumbnail: '/icons/cupid.png',
-    build: undefined,
-  },
-  {
-    id: 35,
-    name: 'Daji',
-    thumbnail: '/icons/daji.png',
-  },
-  {
-    id: 36,
-    name: 'Discordia',
-    thumbnail: '/icons/discordia.png',
-  },
-  {
-    id: 37,
-    name: 'Erlang Shen',
-    thumbnail: '/icons/erlangshen.png',
-  },
-  {
-    id: 38,
-    name: 'Fafnir',
-    thumbnail: '/icons/fafnir.png',
-  },
-  {
-    id: 39,
-    name: 'Fenrir',
-    thumbnail: '/icons/fenrir.png',
-  },
-  {
-    id: 40,
-    name: 'Freya',
-    thumbnail: '/icons/freya.png',
-  },
-  {
-    id: 41,
-    name: 'Ganesha',
-    thumbnail: '/icons/ganesha.png',
-  },
-  {
-    id: 42,
-    name: 'Geb',
-    thumbnail: '/icons/geb.png',
-  },
-  {
-    id: 43,
-    name: 'Guan Yu',
-    thumbnail: '/icons/guanyu.png',
-  },
-  {
-    id: 44,
-    name: 'Hachiman',
-    thumbnail: '/icons/hachiman.png',
-  },
-];
-
 export const allGods = [
   {
     id: 1,
@@ -1393,3 +1351,41 @@ export const allGods = [
     thumbnail: '/icons/zhongkui.png',
   },
 ];
+
+/**
+ * <GodBuildPage>
+ *   - <Starter>
+ *    - <Item>
+ *    - <Item>
+ *    - <Item>
+ *
+ *  build = {
+ *  id: 1,
+ *  name: 'build',
+ *  starter: ['123', '124']
+ *  }
+ *
+ *  // reads json object
+ *  const itemService = new ItemService();
+ *
+ *  const starterItems = [];
+ *
+ *  // shape of item
+ *  item = {
+ *    id: 1,
+ *    name: "name",
+ *    thumbnail: "url"
+ *  }
+ *
+ *  build.starter.forEach(itemId => {
+ *    starterItems.push(
+ *      let item = itemService.getItem(itemId);
+ *
+ *      starterItems.push(
+ *      <SmiteItem id={item.id} name={item.name} thumbnail={item.thumbnail}/>
+ *      )
+ *    )
+ * })
+ *
+ *
+ */

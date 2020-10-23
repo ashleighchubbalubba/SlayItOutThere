@@ -10,7 +10,6 @@ const BuildPage = ({ activeGod, isSavedGods, isDisplay, setIsDisplay }: any) => 
   //Keep track on what items to display in grid
   const initialBuildState: BuildPageState = {
     buildGridItems: allItems as Array<ItemType>,
-    // selectedItem: ItemType,
   };
 
   //Initialize and store default state
@@ -20,8 +19,17 @@ const BuildPage = ({ activeGod, isSavedGods, isDisplay, setIsDisplay }: any) => 
   const setBuildGridItems = (newItemsList: Array<ItemType>) => {
     setState({
       buildGridItems: newItemsList,
+      selectedItem: state.selectedItem,
     });
   };
+
+  //sets the selected item
+  const setSelectedItem = (itemID: number) => {
+    setState({
+      buildGridItems: state.buildGridItems,
+      selectedItem: itemID,
+    });
+  }
 
   let build,
     name,
@@ -51,8 +59,11 @@ const BuildPage = ({ activeGod, isSavedGods, isDisplay, setIsDisplay }: any) => 
         setIsDisplay={setIsDisplay}
         setBuildGridItems={setBuildGridItems}
       />
-      <BuildGrid buildGridItems={state.buildGridItems} />
-      <BuildSections build={build} />
+      <BuildGrid 
+        buildGridItems={state.buildGridItems}
+        setSelectedItem={setSelectedItem}
+      />
+      <BuildSections build={build} selectedItem={state.selectedItem}/>
     </div>
   );
 };

@@ -2,10 +2,15 @@ import React from 'react';
 import './ItemTile.scss';
 import { Item as ItemType } from '../../../types';
 
-const ItemTile = ({ name, thumbnail, css }: any) => {
+const ItemTile = ({ id, name, thumbnail, css, setSelectedItem }: any) => {
+
+  const handleSelectedItem = (itemID: number) => {
+    setSelectedItem(itemID);
+  }
+
   return (
     <>
-      <div className = "itemTileWrapper">
+      <div className = "itemTileWrapper" onClick={() => handleSelectedItem(id)}>
         <div className="itemTileOverlay">
           <img src={thumbnail} alt="Item Thumbnail" className="itemTileThumbnail" />
         </div>

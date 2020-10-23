@@ -8,7 +8,7 @@ import { sampleCupidBuild } from '../../../constants/smiteData';
 
 import './BuildSections.scss';
 
-const BuildSections = ({ build }: any) => {
+const BuildSections = ({ build, selectedItem }: any) => {
 
   const itemService = new ItemService();
   let item = undefined;
@@ -24,6 +24,11 @@ const BuildSections = ({ build }: any) => {
       buildSection: buildState,
     });
   };
+
+  // React.useEffect(() => {
+  //   if(state.buildSection == 0)
+  //     sampleCupidBuild.add
+  // }, [selectedItem]);
 
   return (
     <>

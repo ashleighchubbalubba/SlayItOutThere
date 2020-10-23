@@ -2,7 +2,7 @@ import React from 'react';
 import ItemTile from '../../GlobalComponents/ItemTile';
 import ItemService from '../../../itemService';
 import { Item as ItemType } from '../../../types';
-import { sampleCupidBuild, itemGridTile } from '../../../constants/smiteData';
+import { sampleCupidBuild } from '../../../constants/smiteData';
 import './ItemsGrid.scss';
 
 const ItemsGrid = ({ build }: any) => {
@@ -22,7 +22,7 @@ const ItemsGrid = ({ build }: any) => {
               <div className="itemSectionFlex">
                 {sampleCupidBuild.starter.map((itemID: number) => {
                   item = itemService.getItem(itemID);
-                  return <ItemTile name={item.name} thumbnail={item.thumbnail} css={itemGridTile}/>;
+                  return <ItemTile name={item.name} thumbnail={item.thumbnail} />;
                 })}
               </div>
             </div>
@@ -32,7 +32,7 @@ const ItemsGrid = ({ build }: any) => {
               <div className="itemSectionFlex">
                 {sampleCupidBuild.core.map((itemID: number) => {
                   item = itemService.getItem(itemID);
-                  return <ItemTile name={item.name} thumbnail={item.thumbnail} css={itemGridTile}/>;
+                  return <ItemTile name={item.name} thumbnail={item.thumbnail} />;
                 })}
               </div>
             </div>
@@ -43,7 +43,7 @@ const ItemsGrid = ({ build }: any) => {
               <div className="itemSectionFlex">
                 {sampleCupidBuild.situational.map((itemID: number) => {
                   item = itemService.getItem(itemID);
-                  return <ItemTile name={item.name} thumbnail={item.thumbnail} css={itemGridTile}/>;
+                  return <ItemTile name={item.name} thumbnail={item.thumbnail} />;
                 })}
               </div>
             </div>
@@ -53,7 +53,7 @@ const ItemsGrid = ({ build }: any) => {
             <div className="relicSectionFlex">
               {sampleCupidBuild.relics.map((itemID: number) => {
                 item = itemService.getItem(itemID);
-                return <ItemTile id={item.id} name={item.name} thumbnail={item.thumbnail} css={itemGridTile}/>;
+                return <ItemTile id={item.id} name={item.name} thumbnail={item.thumbnail} />;
               })}
             </div>
           </div>

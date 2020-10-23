@@ -33,6 +33,7 @@ export interface GlobalState {
 
 export interface BuildPageState {
   buildGridItems: Array<Item>;
+  selectedItem?: number;
 }
 
 export interface BuildState {
