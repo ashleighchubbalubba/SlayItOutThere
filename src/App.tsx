@@ -5,14 +5,16 @@ import BuildPage from './components/Build/BuildPage';
 import { savedGods, allGods } from './constants/smiteData';
 import { God as GodType, GlobalState } from './types/';
 import { GridRow, GridCol } from './components/GlobalComponents/Grid';
+import ItemService from './itemService';
 import './App.css';
 
 const App = () => {
+  const itemService = new ItemService();
+
   //defines initial values of the states
   const initialState: GlobalState = {
     isSavedGods: true,
     selectedGod: 0,
-    savedGodsList: savedGods as Array<GodType>,
     isDisplay: false,
   };
 
@@ -24,7 +26,6 @@ const App = () => {
     setState({
       isSavedGods: isSavedGods,
       selectedGod: state.selectedGod,
-      savedGodsList: state.savedGodsList,
       isDisplay: state.isDisplay,
     });
   };
@@ -35,7 +36,6 @@ const App = () => {
     setState({
       selectedGod: id,
       isSavedGods: state.isSavedGods,
-      savedGodsList: state.savedGodsList,
       isDisplay: state.isDisplay,
     });
   };
@@ -45,15 +45,8 @@ const App = () => {
     setState({
       isSavedGods: state.isSavedGods,
       selectedGod: state.selectedGod,
-      savedGodsList: state.savedGodsList,
       isDisplay: isDisplay,
     });
-  };
-
-  //what gets the state
-  const getSelectedGod = (id: number) => {
-    if (state.isSavedGods) return state.savedGodsList.find((god) => god.id === id);
-    else return allGods.find((god) => god.id === id);
   };
 
   return (
@@ -66,7 +59,6 @@ const App = () => {
             setIsSavedGods={setIsSavedGod}
             selectedGod={state.selectedGod}
             setSelectedGod={setSelectedGod}
-            savedGodsList={state.savedGodsList}
           />
         </GridCol>
         <GridCol desktop={9} className="rightHalf">
@@ -75,7 +67,7 @@ const App = () => {
             {state.isDisplay && (
               <GridCol desktop={7}>
                 <ItemsPage
-                  activeGod={getSelectedGod(state.selectedGod)}
+                  //activeGod={itemService.getGod(state.selectedGod)}
                   isSavedGods={state.isSavedGods}
                   isDisplay={state.isDisplay}
                   setIsDisplay={setIsDisplay}
@@ -85,7 +77,7 @@ const App = () => {
             {!state.isDisplay && (
               <GridCol desktop={7}>
                 <BuildPage
-                  activeGod={getSelectedGod(state.selectedGod)}
+                  //activeGod={itemService.getGod(state.selectedGod)}
                   isSavedGods={state.isSavedGods}
                   isDisplay={state.isDisplay}
                   setIsDisplay={setIsDisplay}

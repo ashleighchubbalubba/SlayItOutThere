@@ -2,7 +2,7 @@ export interface God {
   id: number;
   name: string;
   thumbnail: string;
-  build?: Array<Build>;
+  build: Array<number>;
 }
 
 export interface Item {
@@ -27,7 +27,6 @@ export interface SitTabs {
 export interface GlobalState {
   isSavedGods: Boolean;
   selectedGod: number;
-  savedGodsList: Array<God>;
   isDisplay: Boolean;
 }
 

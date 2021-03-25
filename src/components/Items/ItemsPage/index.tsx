@@ -2,9 +2,13 @@ import React from 'react';
 import Header from '../../GlobalComponents/Header';
 import ItemsGrid from '../ItemsGrid';
 import { allGods, savedGods } from '../../../constants/smiteData';
+import ItemService from '../../../itemService';
+
 import './ItemsPage.scss';
 
 const ItemsPage = ({ activeGod, isSavedGods, isDisplay, setIsDisplay }: any) => {
+  const itemService = new ItemService();
+
   let build,
     name,
     thumbnail = undefined;
@@ -15,11 +19,11 @@ const ItemsPage = ({ activeGod, isSavedGods, isDisplay, setIsDisplay }: any) => 
     thumbnail = activeGod.thumbnail;
   } else {
     if (isSavedGods) {
-      build = savedGods[0].build;
-      name = savedGods[0].name;
-      thumbnail = savedGods[0].thumbnail;
+      // build = itemService.getGod(savedGods[0]).build;
+      // name = itemService.getGod(savedGods[0]).name;
+      // thumbnail = itemService.getGod(savedGods[0]).thumbnail;
     } else {
-      build = allGods[0].build;
+      //build = allGods[0].build;
       name = allGods[0].name;
       thumbnail = allGods[0].thumbnail;
     }

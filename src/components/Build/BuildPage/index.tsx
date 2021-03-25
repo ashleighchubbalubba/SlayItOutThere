@@ -4,9 +4,12 @@ import BuildGrid from '../BuildGrid';
 import BuildSections from '../BuildSections';
 import { Item as ItemType, BuildPageState } from '../../../types';
 import { allGods, savedGods, allItems } from '../../../constants/smiteData';
+import ItemService from '../../../itemService';
 import './BuildPage.scss';
 
 const BuildPage = ({ activeGod, isSavedGods, isDisplay, setIsDisplay }: any) => {
+  const itemService = new ItemService();
+
   //Keep track on what items to display in grid
   const initialBuildState: BuildPageState = {
     buildGridItems: allItems as Array<ItemType>,
@@ -41,15 +44,16 @@ const BuildPage = ({ activeGod, isSavedGods, isDisplay, setIsDisplay }: any) => 
     thumbnail = activeGod.thumbnail;
   } else {
     if (isSavedGods) {
-      build = savedGods[0].build;
-      name = savedGods[0].name;
-      thumbnail = savedGods[0].thumbnail;
+      // build = itemService.getGod(savedGods[0]).build;
+      // name = itemService.getGod(savedGods[0]).name;
+      // thumbnail = itemService.getGod(savedGods[0]).thumbnail;
     } else {
-      build = allGods[0].build;
+      //build = allGods[0].build;
       name = allGods[0].name;
       thumbnail = allGods[0].thumbnail;
     }
   }
+  
   return (
     <div className="buildPageWrapper">
       <Header
